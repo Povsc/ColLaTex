@@ -7,8 +7,8 @@ Original App Design Project
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
-<!-- 1. [Wireframes](#Wireframes)
-2. [Schema](#Schema) -->
+1. [Wireframes](#Wireframes)
+<!-- 2. [Schema](#Schema) -->
 
 ## Overview
 ### Description
@@ -34,19 +34,21 @@ The app serves primarily as a $\LaTeX$ editor on the go. More importantly, the a
 * User can share an existing document
 * User can be invited to 'join' an existing document
 * User can navigate through the documents they have access to through a home screen
-* Users can simultaneously edit text
-* User can (independently) compile/view compiled document
+* Different users can edit a single document (independently)
+* User can create a new PDF file with their code
+    * User can export the PDF file
 
 **Optional Nice-to-have Stories**
 
-* User can create a new PDF file with their code
-    * User can export the PDF file
 * The app has some basic auto-complete features
+* Users can simultaneously edit text
 * The editor provides a specialized keyboard (e.g. \\ , { , and } should be in the main keyboard)
 * User can select different themes (e.g. dark mode, etc.)
 * User can choose to split their editor's screen to display the uncomplied and compiled documents simultaneously
 * User can change a document's sharing settings (i.e. view only, etc.)
 * User can edit their profile
+* Global feed
+* User can search for documents
 
 ### 2. Screen Archetypes
 
@@ -91,11 +93,11 @@ The app serves primarily as a $\LaTeX$ editor on the go. More importantly, the a
             * View compiled document
 * Porfile settings
 
-<!-- ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+## Wireframes
+![202107071210131000](https://user-images.githubusercontent.com/73599216/124794199-c3ae7200-df1c-11eb-936c-13f54a682cb9.jpg)
 
-### [BONUS] Digital Wireframes & Mockups
+
+<!-- ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
