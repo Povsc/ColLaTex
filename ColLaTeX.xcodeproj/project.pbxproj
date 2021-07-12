@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
+		C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0445269CD39900926C35 /* SceneDelegate.m */; };
+		C9BF0449269CD39900926C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0448269CD39900926C35 /* ViewController.m */; };
+		C9BF044C269CD39900926C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044A269CD39900926C35 /* Main.storyboard */; };
+		C9BF044E269CD39A00926C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044D269CD39A00926C35 /* Assets.xcassets */; };
+		C9BF0451269CD39A00926C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */; };
+		C9BF0454269CD39A00926C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0453269CD39A00926C35 /* main.m */; };
+		C9BF045E269CD39A00926C35 /* ColLaTeXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF045D269CD39A00926C35 /* ColLaTeXTests.m */; };
+		C9BF0469269CD39B00926C35 /* ColLaTeXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9BF045A269CD39A00926C35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BF0436269CD39900926C35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9BF043D269CD39900926C35;
+			remoteInfo = ColLaTeX;
+		};
+		C9BF0465269CD39B00926C35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BF0436269CD39900926C35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9BF043D269CD39900926C35;
+			remoteInfo = ColLaTeX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9BF043E269CD39900926C35 /* ColLaTeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColLaTeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BF0441269CD39900926C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9BF0442269CD39900926C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9BF0444269CD39900926C35 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C9BF0445269CD39900926C35 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C9BF0447269CD39900926C35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C9BF0448269CD39900926C35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9BF044B269CD39900926C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9BF044D269CD39A00926C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9BF0450269CD39A00926C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9BF0452269CD39A00926C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BF0453269CD39A00926C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9BF0459269CD39A00926C35 /* ColLaTeXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColLaTeXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BF045D269CD39A00926C35 /* ColLaTeXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColLaTeXTests.m; sourceTree = "<group>"; };
+		C9BF045F269CD39A00926C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BF0464269CD39B00926C35 /* ColLaTeXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColLaTeXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColLaTeXUITests.m; sourceTree = "<group>"; };
+		C9BF046A269CD39B00926C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9BF043B269CD39900926C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0456269CD39A00926C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0461269CD39B00926C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9BF0435269CD39900926C35 = {
+			isa = PBXGroup;
+			children = (
+				C9BF0440269CD39900926C35 /* ColLaTeX */,
+				C9BF045C269CD39A00926C35 /* ColLaTeXTests */,
+				C9BF0467269CD39B00926C35 /* ColLaTeXUITests */,
+				C9BF043F269CD39900926C35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9BF043F269CD39900926C35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF043E269CD39900926C35 /* ColLaTeX.app */,
+				C9BF0459269CD39A00926C35 /* ColLaTeXTests.xctest */,
+				C9BF0464269CD39B00926C35 /* ColLaTeXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9BF0440269CD39900926C35 /* ColLaTeX */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF0441269CD39900926C35 /* AppDelegate.h */,
+				C9BF0442269CD39900926C35 /* AppDelegate.m */,
+				C9BF0444269CD39900926C35 /* SceneDelegate.h */,
+				C9BF0445269CD39900926C35 /* SceneDelegate.m */,
+				C9BF0447269CD39900926C35 /* ViewController.h */,
+				C9BF0448269CD39900926C35 /* ViewController.m */,
+				C9BF044A269CD39900926C35 /* Main.storyboard */,
+				C9BF044D269CD39A00926C35 /* Assets.xcassets */,
+				C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */,
+				C9BF0452269CD39A00926C35 /* Info.plist */,
+				C9BF0453269CD39A00926C35 /* main.m */,
+			);
+			path = ColLaTeX;
+			sourceTree = "<group>";
+		};
+		C9BF045C269CD39A00926C35 /* ColLaTeXTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF045D269CD39A00926C35 /* ColLaTeXTests.m */,
+				C9BF045F269CD39A00926C35 /* Info.plist */,
+			);
+			path = ColLaTeXTests;
+			sourceTree = "<group>";
+		};
+		C9BF0467269CD39B00926C35 /* ColLaTeXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */,
+				C9BF046A269CD39B00926C35 /* Info.plist */,
+			);
+			path = ColLaTeXUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9BF043D269CD39900926C35 /* ColLaTeX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BF046D269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeX" */;
+			buildPhases = (
+				C9BF043A269CD39900926C35 /* Sources */,
+				C9BF043B269CD39900926C35 /* Frameworks */,
+				C9BF043C269CD39900926C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColLaTeX;
+			productName = ColLaTeX;
+			productReference = C9BF043E269CD39900926C35 /* ColLaTeX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9BF0458269CD39A00926C35 /* ColLaTeXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BF0470269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXTests" */;
+			buildPhases = (
+				C9BF0455269CD39A00926C35 /* Sources */,
+				C9BF0456269CD39A00926C35 /* Frameworks */,
+				C9BF0457269CD39A00926C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BF045B269CD39A00926C35 /* PBXTargetDependency */,
+			);
+			name = ColLaTeXTests;
+			productName = ColLaTeXTests;
+			productReference = C9BF0459269CD39A00926C35 /* ColLaTeXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9BF0463269CD39B00926C35 /* ColLaTeXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BF0473269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXUITests" */;
+			buildPhases = (
+				C9BF0460269CD39B00926C35 /* Sources */,
+				C9BF0461269CD39B00926C35 /* Frameworks */,
+				C9BF0462269CD39B00926C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BF0466269CD39B00926C35 /* PBXTargetDependency */,
+			);
+			name = ColLaTeXUITests;
+			productName = ColLaTeXUITests;
+			productReference = C9BF0464269CD39B00926C35 /* ColLaTeXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9BF0436269CD39900926C35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C9BF043D269CD39900926C35 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					C9BF0458269CD39A00926C35 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C9BF043D269CD39900926C35;
+					};
+					C9BF0463269CD39B00926C35 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C9BF043D269CD39900926C35;
+					};
+				};
+			};
+			buildConfigurationList = C9BF0439269CD39900926C35 /* Build configuration list for PBXProject "ColLaTeX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9BF0435269CD39900926C35;
+			productRefGroup = C9BF043F269CD39900926C35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9BF043D269CD39900926C35 /* ColLaTeX */,
+				C9BF0458269CD39A00926C35 /* ColLaTeXTests */,
+				C9BF0463269CD39B00926C35 /* ColLaTeXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9BF043C269CD39900926C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BF0451269CD39A00926C35 /* LaunchScreen.storyboard in Resources */,
+				C9BF044E269CD39A00926C35 /* Assets.xcassets in Resources */,
+				C9BF044C269CD39900926C35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0457269CD39A00926C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0462269CD39B00926C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9BF043A269CD39900926C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BF0449269CD39900926C35 /* ViewController.m in Sources */,
+				C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */,
+				C9BF0454269CD39A00926C35 /* main.m in Sources */,
+				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0455269CD39A00926C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BF045E269CD39A00926C35 /* ColLaTeXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BF0460269CD39B00926C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BF0469269CD39B00926C35 /* ColLaTeXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9BF045B269CD39A00926C35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9BF043D269CD39900926C35 /* ColLaTeX */;
+			targetProxy = C9BF045A269CD39A00926C35 /* PBXContainerItemProxy */;
+		};
+		C9BF0466269CD39B00926C35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9BF043D269CD39900926C35 /* ColLaTeX */;
+			targetProxy = C9BF0465269CD39B00926C35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9BF044A269CD39900926C35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BF044B269CD39900926C35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BF0450269CD39A00926C35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9BF046B269CD39B00926C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9BF046C269CD39B00926C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9BF046E269CD39B00926C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9BF046F269CD39B00926C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9BF0471269CD39B00926C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColLaTeX.app/ColLaTeX";
+			};
+			name = Debug;
+		};
+		C9BF0472269CD39B00926C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColLaTeX.app/ColLaTeX";
+			};
+			name = Release;
+		};
+		C9BF0474269CD39B00926C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ColLaTeX;
+			};
+			name = Debug;
+		};
+		C9BF0475269CD39B00926C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TYQL4XJ34;
+				INFOPLIST_FILE = ColLaTeXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ColLaTeXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ColLaTeX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9BF0439269CD39900926C35 /* Build configuration list for PBXProject "ColLaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BF046B269CD39B00926C35 /* Debug */,
+				C9BF046C269CD39B00926C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BF046D269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BF046E269CD39B00926C35 /* Debug */,
+				C9BF046F269CD39B00926C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BF0470269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BF0471269CD39B00926C35 /* Debug */,
+				C9BF0472269CD39B00926C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BF0473269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BF0474269CD39B00926C35 /* Debug */,
+				C9BF0475269CD39B00926C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9BF0436269CD39900926C35 /* Project object */;
+}
