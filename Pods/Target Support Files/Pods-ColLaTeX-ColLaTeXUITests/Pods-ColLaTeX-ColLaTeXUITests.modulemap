@@ -1,0 +1,6 @@
+framework module Pods_ColLaTeX_ColLaTeXUITests {
+  umbrella header "Pods-ColLaTeX-ColLaTeXUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

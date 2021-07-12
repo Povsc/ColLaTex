@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06819F46EA19BBCD0C2090A2 /* Pods_ColLaTeXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B21645CDC2BB75436127C5 /* Pods_ColLaTeXTests.framework */; };
+		65CE784CE8445562AD38AFA3 /* Pods_ColLaTeX_ColLaTeXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */; };
 		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
 		C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0445269CD39900926C35 /* SceneDelegate.m */; };
 		C9BF0449269CD39900926C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0448269CD39900926C35 /* ViewController.m */; };
@@ -16,6 +18,7 @@
 		C9BF0454269CD39A00926C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0453269CD39A00926C35 /* main.m */; };
 		C9BF045E269CD39A00926C35 /* ColLaTeXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF045D269CD39A00926C35 /* ColLaTeXTests.m */; };
 		C9BF0469269CD39B00926C35 /* ColLaTeXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */; };
+		D8117B3DE02B5501A12DCA0C /* Pods_ColLaTeX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56B21645CDC2BB75436127C5 /* Pods_ColLaTeXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColLaTeXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColLaTeX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9749783729D4CBAA8A083BB3 /* Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C29CF37FA8ACAA98925BE6B3 /* Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9BF043E269CD39900926C35 /* ColLaTeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColLaTeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BF0441269CD39900926C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9BF0442269CD39900926C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +62,10 @@
 		C9BF0464269CD39B00926C35 /* ColLaTeXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColLaTeXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColLaTeXUITests.m; sourceTree = "<group>"; };
 		C9BF046A269CD39B00926C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.debug.xcconfig"; sourceTree = "<group>"; };
+		EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.release.xcconfig"; sourceTree = "<group>"; };
+		F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.release.xcconfig"; sourceTree = "<group>"; };
+		FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColLaTeX_ColLaTeXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8117B3DE02B5501A12DCA0C /* Pods_ColLaTeX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06819F46EA19BBCD0C2090A2 /* Pods_ColLaTeXTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +89,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CE784CE8445562AD38AFA3 /* Pods_ColLaTeX_ColLaTeXUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019921FD5A04295E6EFA9ED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */,
+				FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */,
+				56B21645CDC2BB75436127C5 /* Pods_ColLaTeXTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9BF0435269CD39900926C35 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +113,8 @@
 				C9BF045C269CD39A00926C35 /* ColLaTeXTests */,
 				C9BF0467269CD39B00926C35 /* ColLaTeXUITests */,
 				C9BF043F269CD39900926C35 /* Products */,
+				F47896D257B3388E7A63F79D /* Pods */,
+				019921FD5A04295E6EFA9ED3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +164,20 @@
 			path = ColLaTeXUITests;
 			sourceTree = "<group>";
 		};
+		F47896D257B3388E7A63F79D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */,
+				F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */,
+				C29CF37FA8ACAA98925BE6B3 /* Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig */,
+				9749783729D4CBAA8A083BB3 /* Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig */,
+				C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */,
+				EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BF046D269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeX" */;
 			buildPhases = (
+				8AB9DC339FF852C8DF43C0FF /* [CP] Check Pods Manifest.lock */,
 				C9BF043A269CD39900926C35 /* Sources */,
 				C9BF043B269CD39900926C35 /* Frameworks */,
 				C9BF043C269CD39900926C35 /* Resources */,
+				03DBEAF54200283FBE7B5B24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BF0470269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXTests" */;
 			buildPhases = (
+				9C851E81A1721225D063DC9D /* [CP] Check Pods Manifest.lock */,
 				C9BF0455269CD39A00926C35 /* Sources */,
 				C9BF0456269CD39A00926C35 /* Frameworks */,
 				C9BF0457269CD39A00926C35 /* Resources */,
@@ -179,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BF0473269CD39B00926C35 /* Build configuration list for PBXNativeTarget "ColLaTeXUITests" */;
 			buildPhases = (
+				82B57B0FAB6AEFEE29063284 /* [CP] Check Pods Manifest.lock */,
 				C9BF0460269CD39B00926C35 /* Sources */,
 				C9BF0461269CD39B00926C35 /* Frameworks */,
 				C9BF0462269CD39B00926C35 /* Resources */,
+				B30221C3307117AD62C63C2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +306,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03DBEAF54200283FBE7B5B24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82B57B0FAB6AEFEE29063284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColLaTeX-ColLaTeXUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AB9DC339FF852C8DF43C0FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColLaTeX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C851E81A1721225D063DC9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColLaTeXTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B30221C3307117AD62C63C2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9BF043A269CD39900926C35 /* Sources */ = {
@@ -438,6 +587,7 @@
 		};
 		C9BF046E269CD39B00926C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +606,7 @@
 		};
 		C9BF046F269CD39B00926C35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +625,7 @@
 		};
 		C9BF0471269CD39B00926C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +646,7 @@
 		};
 		C9BF0472269CD39B00926C35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +667,7 @@
 		};
 		C9BF0474269CD39B00926C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C29CF37FA8ACAA98925BE6B3 /* Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TYQL4XJ34;
@@ -532,6 +686,7 @@
 		};
 		C9BF0475269CD39B00926C35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9749783729D4CBAA8A083BB3 /* Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TYQL4XJ34;
