@@ -21,9 +21,6 @@
                                 <rect key="frame" x="280" y="516" width="48" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="Log In"/>
-                                <connections>
-                                    <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="uoT-Rd-QrN"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s6-m9-vNQ">
                                 <rect key="frame" x="148.5" y="219" width="117" height="70"/>
@@ -68,6 +65,9 @@
                             <constraint firstItem="saw-BJ-uWu" firstAttribute="top" secondItem="yVo-NE-a9m" secondAttribute="bottom" constant="25" id="kPM-8q-GLx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="mdi-nP-qxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,9 +124,6 @@
                                 <rect key="frame" x="277" y="581" width="66" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="sFG-HF-bPo"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5fb-MF-9wi"/>
@@ -154,6 +151,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GIh-fQ-zAw"/>
+                    <connections>
+                        <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="ncm-Lo-9HP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iD-ln-1Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,7 +445,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sFG-HF-bPo"/>
+        <segue reference="ncm-Lo-9HP"/>
         <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
