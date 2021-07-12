@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		65CE784CE8445562AD38AFA3 /* Pods_ColLaTeX_ColLaTeXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */; };
 		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
 		C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0445269CD39900926C35 /* SceneDelegate.m */; };
-		C9BF0449269CD39900926C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0448269CD39900926C35 /* ViewController.m */; };
 		C9BF044C269CD39900926C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044A269CD39900926C35 /* Main.storyboard */; };
 		C9BF044E269CD39A00926C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044D269CD39A00926C35 /* Assets.xcassets */; };
 		C9BF0451269CD39A00926C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */; };
@@ -49,8 +48,6 @@
 		C9BF0442269CD39900926C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C9BF0444269CD39900926C35 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		C9BF0445269CD39900926C35 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		C9BF0447269CD39900926C35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9BF0448269CD39900926C35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C9BF044B269CD39900926C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9BF044D269CD39A00926C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9BF0450269CD39A00926C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,8 +132,6 @@
 				C9BF0442269CD39900926C35 /* AppDelegate.m */,
 				C9BF0444269CD39900926C35 /* SceneDelegate.h */,
 				C9BF0445269CD39900926C35 /* SceneDelegate.m */,
-				C9BF0447269CD39900926C35 /* ViewController.h */,
-				C9BF0448269CD39900926C35 /* ViewController.m */,
 				C9BF044A269CD39900926C35 /* Main.storyboard */,
 				C9BF044D269CD39A00926C35 /* Assets.xcassets */,
 				C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */,
@@ -174,7 +169,6 @@
 				C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */,
 				EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -415,7 +409,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9BF0449269CD39900926C35 /* ViewController.m in Sources */,
 				C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
