@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="256" y="516" width="48" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="didTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mx2-NA-9yY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s6-m9-vNQ">
                                 <rect key="frame" x="136.66666666666666" y="219" width="117" height="70"/>
@@ -49,6 +52,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ccw-Jn-cSS" firstAttribute="top" secondItem="1s6-m9-vNQ" secondAttribute="bottom" constant="97" id="3QO-SJ-TXd"/>
                             <constraint firstItem="yVo-NE-a9m" firstAttribute="top" secondItem="ccw-Jn-cSS" secondAttribute="bottom" constant="37" id="91u-bO-hU2"/>
@@ -64,12 +68,22 @@
                             <constraint firstItem="yVo-NE-a9m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="iMV-ef-qQH"/>
                             <constraint firstItem="saw-BJ-uWu" firstAttribute="top" secondItem="yVo-NE-a9m" secondAttribute="bottom" constant="25" id="kPM-8q-GLx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tG9-kQ-3if" appends="YES" id="8tk-zd-kQk"/>
+                        </connections>
                     </view>
                     <connections>
-                        <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="mdi-nP-qxq"/>
+                        <outlet property="passwordField" destination="yVo-NE-a9m" id="dLU-cQ-8aJ"/>
+                        <outlet property="usernameField" destination="ccw-Jn-cSS" id="uWy-uy-eSl"/>
+                        <segue destination="991-yo-oMl" kind="presentation" identifier="toHomeScreen" modalPresentationStyle="fullScreen" id="mdi-nP-qxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tG9-kQ-3if">
+                    <connections>
+                        <action selector="didTapScreen:" destination="BYZ-38-t0r" id="3Jq-R2-RAS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
@@ -489,7 +503,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ncm-Lo-9HP"/>
+        <segue reference="mdi-nP-qxq"/>
         <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -21,6 +21,7 @@
 		C9BF047B269DD50600926C35 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF047A269DD50600926C35 /* Document.m */; };
 		C9BF047F269DE79300926C35 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF047E269DE79300926C35 /* SignUpViewController.m */; };
 		C9BF0483269DECC900926C35 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0482269DECC900926C35 /* ImageHelper.m */; };
+		C9BF0486269DF5BF00926C35 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0485269DF5BF00926C35 /* LoginViewController.m */; };
 		D8117B3DE02B5501A12DCA0C /* Pods_ColLaTeX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		C9BF047E269DE79300926C35 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		C9BF0481269DECC900926C35 /* ImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
 		C9BF0482269DECC900926C35 /* ImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		C9BF0484269DF5BF00926C35 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C9BF0485269DF5BF00926C35 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.release.xcconfig"; sourceTree = "<group>"; };
 		F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			children = (
 				C9BF047D269DE79300926C35 /* SignUpViewController.h */,
 				C9BF047E269DE79300926C35 /* SignUpViewController.m */,
+				C9BF0484269DF5BF00926C35 /* LoginViewController.h */,
+				C9BF0485269DF5BF00926C35 /* LoginViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				C9BF047F269DE79300926C35 /* SignUpViewController.m in Sources */,
 				C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */,
 				C9BF0483269DECC900926C35 /* ImageHelper.m in Sources */,
+				C9BF0486269DF5BF00926C35 /* LoginViewController.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
 			);
