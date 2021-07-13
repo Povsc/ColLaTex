@@ -18,6 +18,7 @@
 		C9BF045E269CD39A00926C35 /* ColLaTeXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF045D269CD39A00926C35 /* ColLaTeXTests.m */; };
 		C9BF0469269CD39B00926C35 /* ColLaTeXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */; };
 		C9BF0477269D06AF00926C35 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BF0476269D06AF00926C35 /* Keys.plist */; };
+		C9BF047B269DD50600926C35 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF047A269DD50600926C35 /* Document.m */; };
 		D8117B3DE02B5501A12DCA0C /* Pods_ColLaTeX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		C9BF0468269CD39B00926C35 /* ColLaTeXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColLaTeXUITests.m; sourceTree = "<group>"; };
 		C9BF046A269CD39B00926C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9BF0476269D06AF00926C35 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		C9BF0479269DD50600926C35 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		C9BF047A269DD50600926C35 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.release.xcconfig"; sourceTree = "<group>"; };
 		F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +111,6 @@
 		C9BF0435269CD39900926C35 = {
 			isa = PBXGroup;
 			children = (
-				C9BF0476269D06AF00926C35 /* Keys.plist */,
 				C9BF0440269CD39900926C35 /* ColLaTeX */,
 				C9BF045C269CD39A00926C35 /* ColLaTeXTests */,
 				C9BF0467269CD39B00926C35 /* ColLaTeXUITests */,
@@ -131,6 +133,7 @@
 		C9BF0440269CD39900926C35 /* ColLaTeX */ = {
 			isa = PBXGroup;
 			children = (
+				C9BF0478269DD4F000926C35 /* Models */,
 				C9BF0441269CD39900926C35 /* AppDelegate.h */,
 				C9BF0442269CD39900926C35 /* AppDelegate.m */,
 				C9BF0444269CD39900926C35 /* SceneDelegate.h */,
@@ -140,6 +143,7 @@
 				C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */,
 				C9BF0452269CD39A00926C35 /* Info.plist */,
 				C9BF0453269CD39A00926C35 /* main.m */,
+				C9BF0476269D06AF00926C35 /* Keys.plist */,
 			);
 			path = ColLaTeX;
 			sourceTree = "<group>";
@@ -160,6 +164,15 @@
 				C9BF046A269CD39B00926C35 /* Info.plist */,
 			);
 			path = ColLaTeXUITests;
+			sourceTree = "<group>";
+		};
+		C9BF0478269DD4F000926C35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF0479269DD50600926C35 /* Document.h */,
+				C9BF047A269DD50600926C35 /* Document.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F47896D257B3388E7A63F79D /* Pods */ = {
@@ -413,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BF047B269DD50600926C35 /* Document.m in Sources */,
 				C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
