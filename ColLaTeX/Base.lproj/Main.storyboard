@@ -308,7 +308,7 @@
         <!--New Document-->
         <scene sceneID="NDA-Ee-0rn">
             <objects>
-                <viewController id="Z2K-YQ-o3G" sceneMemberID="viewController">
+                <viewController id="Z2K-YQ-o3G" customClass="CreateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2x-4v-Uyw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,7 +322,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-ab-OAc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-ab-OAc">
                                         <rect key="frame" x="19" y="65" width="319" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -333,7 +333,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-aX-hCP">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John, Kevin..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-aX-hCP">
                                         <rect key="frame" x="19" y="157" width="319" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -367,7 +367,18 @@
                             <constraint firstItem="1Ut-3K-28t" firstAttribute="top" secondItem="cda-tb-Fmc" secondAttribute="top" constant="28" id="emq-5e-J4Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Document" id="iSo-26-0Bv"/>
+                    <navigationItem key="navigationItem" title="New Document" id="iSo-26-0Bv">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="0tX-i6-Luv">
+                            <connections>
+                                <action selector="didTapCreate:" destination="Z2K-YQ-o3G" id="Bg9-KU-n4T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="1Ut-3K-28t" id="5JF-DC-o65"/>
+                        <outlet property="sharedLabel" destination="OkQ-aX-hCP" id="h9C-yl-CUD"/>
+                        <outlet property="titleLabel" destination="lOR-ab-OAc" id="5Vv-ss-03K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XR-rJ-9uB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
