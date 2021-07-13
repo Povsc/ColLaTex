@@ -52,4 +52,30 @@
     [newDoc saveInBackgroundWithBlock: completion];
 }
 
+- (NSString *)stringWithDate{
+    // Instantiate formatter
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    // Configure the input format to parse the date string
+    formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
+    // Compute how much time has passed
+    NSTimeInterval secondsSince = [self.createdAt timeIntervalSinceNow];
+    int seconds = secondsSince * (-1);
+    int minutes = seconds / 60;
+    int hours = minutes / 60;
+    int days = hours / 24;
+    // Convert Date to String
+    if (minutes < 1){
+        return [NSString stringWithFormat:@"%ds ago", seconds];
+    }
+    else if (hours < 1){
+        return [NSString stringWithFormat:@"%dm ago", minutes];
+    }
+    else if (days < 7){
+        return [NSString stringWithFormat:@"%dd ago", days];
+    }
+    else {
+        return [formatter stringFromDate:self.createdAt];
+    }
+}
+
 @end

@@ -220,14 +220,14 @@
         <!--My Documents-->
         <scene sceneID="AuE-0z-nEl">
             <objects>
-                <viewController id="zdI-vj-Fwt" sceneMemberID="viewController">
+                <viewController id="zdI-vj-Fwt" customClass="MyDocumentsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AyH-Qv-85X">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-Bt-oxI">
                                 <rect key="frame" x="295" y="672" width="75" height="75"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="KfP-Ul-O60"/>
                                     <constraint firstAttribute="height" constant="75" id="iRt-Ia-7zZ"/>
@@ -236,14 +236,14 @@
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Z2K-YQ-o3G" kind="show" id="ZaH-Wd-UYv"/>
+                                    <segue destination="Z2K-YQ-o3G" kind="show" identifier="toCreateDocument" id="lFI-G7-td9"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-OU-QVB">
                                 <rect key="frame" x="0.0" y="32" width="390" height="844"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="119" id="np0-O8-pho">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyDocumentCell" rowHeight="119" id="np0-O8-pho" customClass="MyDocumentCell">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="np0-O8-pho" id="TSY-E4-hcl">
@@ -276,7 +276,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="l1r-EB-S15" kind="show" id="oY0-lf-guf"/>
+                                            <outlet property="modifiedLabel" destination="rbY-8S-vPj" id="w1g-ui-lVq"/>
+                                            <outlet property="titleLabel" destination="0aG-cK-wAG" id="MAK-M5-d4c"/>
+                                            <segue destination="l1r-EB-S15" kind="show" identifier="toComposeView" id="oY0-lf-guf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -294,6 +296,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Documents" id="Y1p-YH-YzG"/>
+                    <connections>
+                        <outlet property="createButton" destination="Q8M-Bt-oxI" id="Kll-C2-wgG"/>
+                        <outlet property="tableView" destination="4HD-OU-QVB" id="FhQ-pY-tMp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDK-1g-5bM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -596,6 +602,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

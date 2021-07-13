@@ -19,4 +19,6 @@
 
 + (void) newDocumentNamed: (NSString *)name withUsersArray: ( NSArray <PFUser *> *) arrayOfUsers withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 
+- (NSString *)stringWithDate;
+
 @end
