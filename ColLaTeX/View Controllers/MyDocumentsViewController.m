@@ -38,7 +38,7 @@
     [self.tableView insertSubview:refreshControl atIndex:0];
     
     // Load in data
-    [self beginRefresh:refreshControl];        
+    [self beginRefresh:refreshControl];
 }
 
 - (void) beginRefresh:(UIRefreshControl *) refreshControl {
@@ -46,7 +46,7 @@
     PFQuery *documentQuery = [Document query];
     [documentQuery whereKey:@"owner" equalTo:PFUser.currentUser];
     [documentQuery orderByDescending:@"updatedAt"];
-    [documentQuery includeKey:@""];
+    [documentQuery includeKey:@"owner"];
     documentQuery.limit = 20;
 
     [documentQuery findObjectsInBackgroundWithBlock:^(NSArray<Document *> * _Nullable documents, NSError * _Nullable error) {
