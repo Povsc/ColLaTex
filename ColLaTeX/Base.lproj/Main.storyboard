@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,14 +411,20 @@
         <!--Profile-->
         <scene sceneID="6Cq-gc-a8T">
             <objects>
-                <viewController id="azy-k7-vzv" sceneMemberID="viewController">
+                <viewController id="azy-k7-vzv" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HsY-7n-Cfy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CUk-ws-np6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Me3-n6-Wkt"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Me3-n6-Wkt">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="is4-zJ-602">
+                            <connections>
+                                <action selector="didTapLogOut:" destination="azy-k7-vzv" id="V8q-7L-Tat"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8r-Jc-dyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,7 +509,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ncm-Lo-9HP"/>
+        <segue reference="mdi-nP-qxq"/>
         <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
