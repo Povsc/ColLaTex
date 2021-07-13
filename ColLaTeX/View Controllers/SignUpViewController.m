@@ -6,9 +6,10 @@
 //
 
 #import "SignUpViewController.h"
+#import "ImageHelper.h"
 @import Parse;
 
-@interface SignUpViewController ()
+@interface SignUpViewController () <UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
@@ -30,6 +31,9 @@
     newUser.username = self.usernameField.text;
     newUser.email = self.emailField.text;
     newUser.password = self.passwordField.text;
+    
+    // Save image in the cloud
+    newUser[@"profilePicture"] = self.imageView.file;
         
     // call sign up function on the object
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
@@ -42,6 +46,37 @@
             [self performSegueWithIdentifier:@"toHomeScreen" sender:nil];
         }
     }];
+}
+
+- (IBAction)didTapSetPicture:(id)sender {
+    // Set up UIImagePickerController
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    
+    // Set data source as library
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+
+    // Resize image
+    editedImage = [ImageHelper resizeImage:editedImage withSize:CGSizeMake(1800, 1800)];
+    
+    // Save image and file
+    self.imageView.file = [ImageHelper getPFFileFromImage:editedImage];
+    self.imageView.image = editedImage;
+    
+    // Dismiss UIImagePickerController to go back to your original view controller
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)didTapScreen:(id)sender {
+    [self.view endEditing:true];
 }
 
 /*

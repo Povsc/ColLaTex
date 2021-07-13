@@ -128,13 +128,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-CW-CCs" customClass="PFImageView">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-CW-CCs" customClass="PFImageView">
                                 <rect key="frame" x="182" y="397" width="128" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="fLU-B8-BWB"/>
                                     <constraint firstAttribute="height" constant="128" id="mzE-P6-YmO"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="spf-B3-Jae" appends="YES" id="kZP-zv-Mbw"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSk-Wt-dZZ">
                                 <rect key="frame" x="42" y="450" width="39" height="22"/>
@@ -145,6 +149,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5fb-MF-9wi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="beT-W4-YDa" firstAttribute="top" secondItem="mPv-y4-UTn" secondAttribute="bottom" constant="41" id="1La-au-2rF"/>
                             <constraint firstItem="6Or-CW-CCs" firstAttribute="leading" secondItem="YKM-kH-jCO" secondAttribute="leading" constant="33" id="2hX-Nf-6pc"/>
@@ -171,6 +176,9 @@
                             <constraint firstItem="ay9-71-p8x" firstAttribute="top" secondItem="dMt-DJ-dMJ" secondAttribute="bottom" constant="53" id="trF-2M-EhU"/>
                             <constraint firstItem="cS4-PN-5m3" firstAttribute="top" secondItem="6Or-CW-CCs" secondAttribute="bottom" constant="43" id="z2u-jM-kvj"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TNo-Vz-OcN" appends="YES" id="6r8-EB-Xba"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="GIh-fQ-zAw"/>
                     <connections>
@@ -178,10 +186,20 @@
                         <outlet property="imageView" destination="6Or-CW-CCs" id="44e-OC-L1T"/>
                         <outlet property="passwordField" destination="YKM-kH-jCO" id="sza-mH-NEV"/>
                         <outlet property="usernameField" destination="mPv-y4-UTn" id="wlW-tW-JhU"/>
-                        <segue destination="991-yo-oMl" kind="presentation" modalPresentationStyle="fullScreen" id="ncm-Lo-9HP"/>
+                        <segue destination="991-yo-oMl" kind="presentation" identifier="toHomeScreen" modalPresentationStyle="fullScreen" id="ncm-Lo-9HP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iD-ln-1Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="spf-B3-Jae">
+                    <connections>
+                        <action selector="didTapSetPicture:" destination="cQW-qd-hwf" id="Dz9-ih-Xaa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TNo-Vz-OcN">
+                    <connections>
+                        <action selector="didTapScreen:" destination="cQW-qd-hwf" id="yV9-5I-ftA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="93.75"/>
         </scene>
@@ -395,7 +413,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="sMJ-y0-Hc1">
             <objects>
-                <tabBarController storyboardIdentifier="toHomeScreen" id="991-yo-oMl" sceneMemberID="viewController">
+                <tabBarController id="991-yo-oMl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sLg-ha-hQE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dWM-NT-fRS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -484,6 +502,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
