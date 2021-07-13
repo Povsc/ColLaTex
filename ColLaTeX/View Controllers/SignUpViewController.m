@@ -34,6 +34,9 @@
     
     // Save image in the cloud
     newUser[@"profilePicture"] = self.imageView.file;
+    
+    // Create empty array of shared documents
+    newUser[@"sharedWithMe"] = [NSArray new];
         
     // call sign up function on the object
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
