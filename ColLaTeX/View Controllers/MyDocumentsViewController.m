@@ -32,6 +32,16 @@
      self.createButton.frame.size.width /2;
     self.createButton.layer.masksToBounds = true;
     
+    // Instantiate refreshControl
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+    
+    // Load in data
+    [self beginRefresh:refreshControl];        
+}
+
+- (void) beginRefresh:(UIRefreshControl *) refreshControl {
     // Create a new query
     PFQuery *documentQuery = [Document query];
     [documentQuery whereKey:@"owner" equalTo:PFUser.currentUser];
@@ -48,9 +58,11 @@
        }
     }];
     
+    // Tell the refreshControl to stop spinning
+     [refreshControl endRefreshing];
+    
     // Reload data
     [self.tableView reloadData];
-        
 }
 
 /*
