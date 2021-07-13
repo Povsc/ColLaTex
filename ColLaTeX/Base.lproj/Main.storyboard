@@ -427,7 +427,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="sMJ-y0-Hc1">
             <objects>
-                <tabBarController id="991-yo-oMl" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AuthenticatedNavigationController" id="991-yo-oMl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sLg-ha-hQE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dWM-NT-fRS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -503,7 +503,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mdi-nP-qxq"/>
+        <segue reference="ncm-Lo-9HP"/>
         <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
