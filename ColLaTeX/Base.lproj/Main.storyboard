@@ -420,10 +420,10 @@
             </objects>
             <point key="canvasLocation" x="489" y="4594"/>
         </scene>
-        <!--View Controller-->
+        <!--Compose View Controller-->
         <scene sceneID="4Wq-ie-5r3">
             <objects>
-                <viewController id="l1r-EB-S15" sceneMemberID="viewController">
+                <viewController id="l1r-EB-S15" customClass="ComposeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D60-Nb-HmW">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,6 +485,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonView" destination="aRb-iU-YyU" id="uqu-r2-mYW"/>
+                        <outlet property="contentLabel" destination="39a-dI-JUw" id="PBs-Ai-Jp6"/>
+                        <outlet property="titleLabel" destination="0aZ-Zv-hvB" id="bZr-V7-2ik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Tl-yIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
