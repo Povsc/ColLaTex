@@ -389,11 +389,11 @@
             </objects>
             <point key="canvasLocation" x="-1295" y="3864"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="xcu-Vy-Rra">
             <objects>
-                <viewController id="vNP-7L-VCc" customClass="PDFViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hqd-rY-YqO">
+                <viewController id="vNP-7L-VCc" customClass="ContentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqd-rY-YqO" customClass="PDFView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="wsd-hQ-Dws"/>
@@ -718,7 +718,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ncm-Lo-9HP"/>
-        <segue reference="oY0-lf-guf"/>
+        <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>

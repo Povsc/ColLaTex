@@ -80,4 +80,10 @@
     }
 }
 
+- (NSString *)URLString{
+    
+    NSString *encodedUrl = [self.content stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *urlString = [NSString stringWithFormat:@"https://latexonline.cc/compile?text=%@", encodedUrl];
+    return urlString;
+}
 @end

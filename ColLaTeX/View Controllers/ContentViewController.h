@@ -6,13 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PDFKit/PDFKit.h"
+#import "Document.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PDFViewController : UIViewController
+@interface ContentViewController : UIViewController
 
-@property (strong, nonatomic) PDFDocument *pdf;
+@property (strong, nonatomic) Document *document;
 
 @end
 

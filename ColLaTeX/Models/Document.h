@@ -21,4 +21,6 @@
 
 - (NSString *)stringWithDate;
 
+- (NSString *)URLString;
+
 @end

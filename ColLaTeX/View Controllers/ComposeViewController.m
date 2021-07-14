@@ -6,6 +6,8 @@
 //
 
 #import "ComposeViewController.h"
+#import "ContentViewController.h"
+#import "PDFKit/PDFKit.h"
 @import Parse;
 
 @interface ComposeViewController () <UITextViewDelegate>
@@ -50,14 +52,18 @@
     self.contentViewBottomConstraint.constant -= 240;
     [self.contentLabel updateConstraints];
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"toPDF"]){
+        ContentViewController *pdfViewController = [segue destinationViewController];
+        pdfViewController.document = self.document;
+    }
 }
-*/
+
 
 @end
