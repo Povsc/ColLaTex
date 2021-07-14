@@ -31,8 +31,7 @@
     // Create an empty document with title
     NSString *beginning = [NSString stringWithFormat: @"\\documentclass[12pt]{article}\n"
                            "\n"
-                           "\\usepackage[utf8]{inputenc}\n"
-                           "\\usepackage[spanish,activeacute]{babel}\n"
+                           "\\usepackage{amsmath}\n"
                            "\n"
                            "\\title{%@}\n", name];
     NSString *end = [NSString stringWithFormat: @"\\author{%@}\n"
