@@ -52,17 +52,17 @@
     [documentQuery findObjectsInBackgroundWithBlock:^(NSArray<Document *> * _Nullable documents, NSError * _Nullable error) {
        if (documents) {
              self.arrayOfDocuments = [documents mutableCopy];
+           
+           // Tell the refreshControl to stop spinning
+            [refreshControl endRefreshing];
+           
+           // Reload data
+           [self.tableView reloadData];
        }
        else {
            NSLog(@"Error: %@", error.localizedDescription);
        }
     }];
-    
-    // Tell the refreshControl to stop spinning
-     [refreshControl endRefreshing];
-    
-    // Reload data
-    [self.tableView reloadData];
 }
 
 /*
