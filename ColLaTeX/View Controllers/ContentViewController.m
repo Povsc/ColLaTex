@@ -42,17 +42,14 @@
                self.pdf = pdf;
                
                // Create PDFView
-               PDFView *pdfView = [[PDFView alloc] initWithFrame:frame];
-               [self.view insertSubview:pdfView atIndex:1];
-               
+               PDFView *pdfView = [[PDFView alloc] initWithFrame:frame];               
                // Configure PDFView
                pdfView.document = self.pdf;
                pdfView.displayMode = kPDFDisplaySinglePageContinuous;
                pdfView.autoScales = true;
-               pdfView.layer.borderWidth = 2;
-               pdfView.layer.borderColor = [UIColor blueColor].CGColor;
+               self.view = pdfView;
                
-               [pdfView reloadInputViews];
+               [self.view reloadInputViews];
            }
     }];
     
