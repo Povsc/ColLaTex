@@ -387,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XR-rJ-9uB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2158" y="3864"/>
+            <point key="canvasLocation" x="-1295" y="3864"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xcu-Vy-Rra">
@@ -402,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbV-Fo-DhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="3864"/>
+            <point key="canvasLocation" x="-726" y="4594"/>
         </scene>
         <!--Settings-->
         <scene sceneID="gdN-sG-jDA">
@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSc-3r-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="3864"/>
+            <point key="canvasLocation" x="489" y="4594"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Wq-ie-5r3">
@@ -464,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Tl-yIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="3134"/>
+            <point key="canvasLocation" x="-115" y="3864"/>
         </scene>
         <!--Shared with Me-->
         <scene sceneID="k1G-yl-Cim">
@@ -674,7 +674,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dp-e1-ddJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2158" y="3134"/>
+            <point key="canvasLocation" x="-1295" y="3134"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
