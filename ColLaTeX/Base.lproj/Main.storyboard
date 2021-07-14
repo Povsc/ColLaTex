@@ -469,7 +469,7 @@
         <!--Shared with Me-->
         <scene sceneID="k1G-yl-Cim">
             <objects>
-                <viewController id="HES-g6-FQv" sceneMemberID="viewController">
+                <viewController id="HES-g6-FQv" customClass="SharedWithMeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8n0-Fr-glX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,7 +478,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="199" id="QrQ-7X-bEn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SharedCell" rowHeight="199" id="QrQ-7X-bEn" customClass="SharedCell">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QrQ-7X-bEn" id="XCB-3K-jgh">
@@ -500,7 +500,7 @@
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="um8-Xt-YXT">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="um8-Xt-YXT" customClass="PFImageView">
                                                     <rect key="frame" x="20" y="30" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="fpE-RO-mkb"/>
@@ -518,6 +518,7 @@
                                                 <constraint firstItem="um8-Xt-YXT" firstAttribute="leading" secondItem="XCB-3K-jgh" secondAttribute="leadingMargin" id="42c-3q-dkS"/>
                                                 <constraint firstItem="2ZI-aO-Yg0" firstAttribute="top" secondItem="um8-Xt-YXT" secondAttribute="bottom" constant="38" id="7Jr-GK-hoU"/>
                                                 <constraint firstItem="7xR-ZI-5Pk" firstAttribute="leading" secondItem="um8-Xt-YXT" secondAttribute="trailing" constant="8" symbolic="YES" id="8SS-3s-SXI"/>
+                                                <constraint firstItem="2ZI-aO-Yg0" firstAttribute="bottom" secondItem="XCB-3K-jgh" secondAttribute="bottomMargin" id="CsD-EQ-R4e"/>
                                                 <constraint firstItem="w2I-ab-39l" firstAttribute="trailing" secondItem="XCB-3K-jgh" secondAttribute="trailingMargin" id="TOi-yl-H3R"/>
                                                 <constraint firstItem="7xR-ZI-5Pk" firstAttribute="trailing" secondItem="XCB-3K-jgh" secondAttribute="trailingMargin" id="YQc-ad-heL"/>
                                                 <constraint firstItem="2ZI-aO-Yg0" firstAttribute="leading" secondItem="XCB-3K-jgh" secondAttribute="leadingMargin" id="Zbo-x8-EHZ"/>
@@ -529,6 +530,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="modifiedLabel" destination="2ZI-aO-Yg0" id="ZrM-Wt-Bnw"/>
+                                            <outlet property="ownerLabel" destination="7xR-ZI-5Pk" id="Nwp-P4-f2e"/>
+                                            <outlet property="profileImageView" destination="um8-Xt-YXT" id="TBb-Oo-88b"/>
+                                            <outlet property="titleLabel" destination="w2I-ab-39l" id="QRh-yW-gxl"/>
                                             <segue destination="l1r-EB-S15" kind="show" id="83o-u7-5UZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -545,6 +550,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shared with Me" id="gJb-yp-sVp"/>
+                    <connections>
+                        <outlet property="tableView" destination="MLE-MH-C17" id="r5c-yT-cic"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xU1-dr-u9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -671,7 +679,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ncm-Lo-9HP"/>
-        <segue reference="oY0-lf-guf"/>
+        <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>

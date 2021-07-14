@@ -26,6 +26,8 @@
 		C9BF048C269E183C00926C35 /* MyDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF048B269E183C00926C35 /* MyDocumentsViewController.m */; };
 		C9BF0490269E186C00926C35 /* MyDocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF048F269E186C00926C35 /* MyDocumentCell.m */; };
 		C9BF0493269E25D600926C35 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0492269E25D600926C35 /* CreateViewController.m */; };
+		C9BF0496269F37ED00926C35 /* SharedWithMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0495269F37ED00926C35 /* SharedWithMeViewController.m */; };
+		C9BF0499269F37FF00926C35 /* SharedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0498269F37FF00926C35 /* SharedCell.m */; };
 		D8117B3DE02B5501A12DCA0C /* Pods_ColLaTeX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F402D73A8A848B63DFAE4 /* Pods_ColLaTeX.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,10 @@
 		C9BF048F269E186C00926C35 /* MyDocumentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDocumentCell.m; sourceTree = "<group>"; };
 		C9BF0491269E25D600926C35 /* CreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
 		C9BF0492269E25D600926C35 /* CreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		C9BF0494269F37ED00926C35 /* SharedWithMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedWithMeViewController.h; sourceTree = "<group>"; };
+		C9BF0495269F37ED00926C35 /* SharedWithMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedWithMeViewController.m; sourceTree = "<group>"; };
+		C9BF0497269F37FF00926C35 /* SharedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedCell.h; sourceTree = "<group>"; };
+		C9BF0498269F37FF00926C35 /* SharedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedCell.m; sourceTree = "<group>"; };
 		D75D10681D0201D176EDA1DD /* Pods-ColLaTeX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9061436588BFDA5CD5CC32 /* Pods-ColLaTeXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.release.xcconfig"; sourceTree = "<group>"; };
 		F46252EAA71D4F628050A2A2 /* Pods-ColLaTeX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX/Pods-ColLaTeX.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				C9BF048B269E183C00926C35 /* MyDocumentsViewController.m */,
 				C9BF0491269E25D600926C35 /* CreateViewController.h */,
 				C9BF0492269E25D600926C35 /* CreateViewController.m */,
+				C9BF0494269F37ED00926C35 /* SharedWithMeViewController.h */,
+				C9BF0495269F37ED00926C35 /* SharedWithMeViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -230,6 +238,8 @@
 			children = (
 				C9BF048E269E186C00926C35 /* MyDocumentCell.h */,
 				C9BF048F269E186C00926C35 /* MyDocumentCell.m */,
+				C9BF0497269F37FF00926C35 /* SharedCell.h */,
+				C9BF0498269F37FF00926C35 /* SharedCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -492,7 +502,9 @@
 				C9BF0490269E186C00926C35 /* MyDocumentCell.m in Sources */,
 				C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */,
 				C9BF0493269E25D600926C35 /* CreateViewController.m in Sources */,
+				C9BF0496269F37ED00926C35 /* SharedWithMeViewController.m in Sources */,
 				C9BF0483269DECC900926C35 /* ImageHelper.m in Sources */,
+				C9BF0499269F37FF00926C35 /* SharedCell.m in Sources */,
 				C9BF0486269DF5BF00926C35 /* LoginViewController.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
