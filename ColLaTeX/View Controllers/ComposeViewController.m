@@ -29,6 +29,10 @@
     self.contentLabel.text = self.document.content;
 }
 
+- (IBAction)didTapScreen:(id)sender {
+    [self.view endEditing:true];
+}
+
 /*
 #pragma mark - Navigation
 

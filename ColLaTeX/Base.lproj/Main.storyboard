@@ -466,6 +466,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0US-7F-nNx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="39a-dI-JUw" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="MtG-bZ-9yh"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="aRb-iU-YyU" secondAttribute="bottom" constant="13" id="UcW-bz-EiC"/>
@@ -477,6 +478,9 @@
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="lrF-hj-TkN"/>
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="top" secondItem="0US-7F-nNx" secondAttribute="top" constant="17" id="pr2-Ec-OLd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ivY-vA-cN7" appends="YES" id="ldA-Vv-oa6"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="knO-B1-Q3z">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="lyi-oZ-Kc9">
@@ -492,6 +496,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Tl-yIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ivY-vA-cN7">
+                    <connections>
+                        <action selector="didTapScreen:" destination="l1r-EB-S15" id="fvy-Qs-pIP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-115.38461538461539" y="3863.7440758293837"/>
         </scene>
