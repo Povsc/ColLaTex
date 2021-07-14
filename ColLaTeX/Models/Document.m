@@ -70,6 +70,9 @@
     else if (hours < 1){
         return [NSString stringWithFormat:@"%dm ago", minutes];
     }
+    else if (hours < 24){
+        return [NSString stringWithFormat:@"%dh ago", hours];
+    }
     else if (days < 7){
         return [NSString stringWithFormat:@"%dd ago", days];
     }
