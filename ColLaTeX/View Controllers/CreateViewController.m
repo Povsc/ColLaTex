@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *sharedLabel;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) NSMutableArray <PFUser *> *arrayOfUsers;
 
 @end
 
@@ -24,12 +25,15 @@
     
     self.contentView.layer.cornerRadius = 30;
     self.contentView.layer.masksToBounds = true;
+    
+    // Initialize array of users
+    self.arrayOfUsers = [NSMutableArray new];
 }
 
 - (IBAction)didTapCreate:(id)sender {
-    NSMutableArray <PFUser *> *arrayOfUsers = [self arrayOfUsersFromString:self.sharedLabel.text];
+    [self arrayOfUsersFromString:self.sharedLabel.text];
     [Document newDocumentNamed:self.titleLabel.text
-                withUsersArray:arrayOfUsers
+                withUsersArray:self.arrayOfUsers
                 withCompletion:^(BOOL succeeded, NSError * error) {
        if (error != nil) {
            NSLog(@"Error: %@", error.localizedDescription);
@@ -40,27 +44,19 @@
     }];
 }
 
-- (NSMutableArray <PFUser *> *) arrayOfUsersFromString:(NSString *)names {
+- (void) arrayOfUsersFromString:(NSString *)names {
+    // Separate each username
     NSMutableArray *arrayOfNames = [[names componentsSeparatedByString:@", "] mutableCopy];
-    NSMutableArray <PFUser *> *arrayOfUsers = [NSMutableArray new];
+    
     for (NSString *name in arrayOfNames){
-        // Create a new query
+        // Create a new query for each name
         PFQuery *userQuery = [PFUser query];
         [userQuery whereKey:@"username" equalTo:name];
         userQuery.limit = 1;
 
-        [userQuery findObjectsInBackgroundWithBlock:^(NSArray<PFUser *> * _Nullable user, NSError * _Nullable error) {
-           if (user && user.count >0) {
-                 [arrayOfUsers addObject:user[0]];
-           }
-           else {
-               NSLog(@"User not found: Error: %@", error.localizedDescription);
-           }
-        }];
+        [self.arrayOfUsers addObjectsFromArray:[userQuery findObjects]]; //:self.arrayOfUsers block:^(NSArray<PFUser *> * _Nullable
     }
-    return arrayOfUsers;
 }
-
 /*
 #pragma mark - Navigation
 
