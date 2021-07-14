@@ -392,7 +392,7 @@
         <!--View Controller-->
         <scene sceneID="xcu-Vy-Rra">
             <objects>
-                <viewController id="vNP-7L-VCc" sceneMemberID="viewController">
+                <viewController id="vNP-7L-VCc" customClass="PDFViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqd-rY-YqO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,7 +436,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <state key="normal" title="PDF"/>
                                         <connections>
-                                            <segue destination="vNP-7L-VCc" kind="presentation" modalPresentationStyle="fullScreen" id="pP5-V0-2GX"/>
+                                            <segue destination="vNP-7L-VCc" kind="presentation" identifier="toPDF" modalPresentationStyle="fullScreen" id="pP5-V0-2GX"/>
                                         </connections>
                                     </button>
                                 </subviews>
