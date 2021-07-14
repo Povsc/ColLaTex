@@ -26,6 +26,11 @@
     // Bring button to front of view
     [self.view bringSubviewToFront:self.buttonView];
     
+    // Make button view circular
+    self.buttonView.layer.cornerRadius =
+    self.buttonView.frame.size.height /2;
+    self.buttonView.layer.masksToBounds = true;
+    
     // Configure labels
     self.titleLabel.text = self.document.name;
     self.contentLabel.text = self.document.content;
