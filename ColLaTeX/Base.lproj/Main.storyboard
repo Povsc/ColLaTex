@@ -446,12 +446,36 @@
                                     <constraint firstAttribute="height" constant="73" id="zCO-9h-wK4"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39a-dI-JUw">
+                                <rect key="frame" x="16" y="197" width="358" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aZ-Zv-hvB">
+                                <rect key="frame" x="16" y="105" width="354" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="0Xq-h5-uFX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0US-7F-nNx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="39a-dI-JUw" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="MtG-bZ-9yh"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="aRb-iU-YyU" secondAttribute="bottom" constant="13" id="UcW-bz-EiC"/>
+                            <constraint firstItem="39a-dI-JUw" firstAttribute="top" secondItem="0aZ-Zv-hvB" secondAttribute="bottom" constant="8" symbolic="YES" id="YRn-Fs-2xS"/>
+                            <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="39a-dI-JUw" secondAttribute="trailing" constant="16" id="ZwT-70-MUN"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="aRb-iU-YyU" secondAttribute="trailing" constant="20" id="aEl-ct-9eJ"/>
+                            <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="39a-dI-JUw" secondAttribute="bottom" constant="7" id="dcS-NE-cFx"/>
+                            <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="0aZ-Zv-hvB" secondAttribute="trailing" constant="20" id="fLc-zq-1i8"/>
+                            <constraint firstItem="0aZ-Zv-hvB" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="lrF-hj-TkN"/>
+                            <constraint firstItem="0aZ-Zv-hvB" firstAttribute="top" secondItem="0US-7F-nNx" secondAttribute="top" constant="17" id="pr2-Ec-OLd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="knO-B1-Q3z">
@@ -464,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Tl-yIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="3864"/>
+            <point key="canvasLocation" x="-115.38461538461539" y="3863.7440758293837"/>
         </scene>
         <!--Shared with Me-->
         <scene sceneID="k1G-yl-Cim">
@@ -686,6 +710,9 @@
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
