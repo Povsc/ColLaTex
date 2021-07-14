@@ -60,7 +60,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqual:@"toPDF"]){
-        ContentViewController *pdfViewController = [segue destinationViewController];
+        UINavigationController *navigationController = segue.destinationViewController;
+        ContentViewController *pdfViewController = navigationController.topViewController;
         pdfViewController.document = self.document;
     }
 }

@@ -399,10 +399,17 @@
                         <viewLayoutGuide key="safeArea" id="wsd-hQ-Dws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6Ru-di-5xI">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="RI5-mW-C9j">
+                            <connections>
+                                <action selector="didTapCancel:" destination="vNP-7L-VCc" id="YRN-V5-TPM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbV-Fo-DhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="4594"/>
+            <point key="canvasLocation" x="-726" y="5425"/>
         </scene>
         <!--Settings-->
         <scene sceneID="gdN-sG-jDA">
@@ -436,7 +443,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <state key="normal" title="PDF"/>
                                         <connections>
-                                            <segue destination="vNP-7L-VCc" kind="presentation" identifier="toPDF" modalPresentationStyle="fullScreen" id="pP5-V0-2GX"/>
+                                            <segue destination="tRU-uC-RBW" kind="presentation" identifier="toPDF" modalPresentationStyle="fullScreen" id="pP5-V0-2GX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -714,6 +721,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dp-e1-ddJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1295" y="3134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WR2-0V-o3u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tRU-uC-RBW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mnY-AJ-7FC">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNP-7L-VCc" kind="relationship" relationship="rootViewController" id="2gw-uA-hkQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEx-Nm-Ncp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726.15384615384608" y="4593.8388625592415"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
