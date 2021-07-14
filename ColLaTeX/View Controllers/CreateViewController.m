@@ -40,6 +40,7 @@
            
        } else {
            NSLog(@"Document created successfully");
+           [self dismissViewControllerAnimated:YES completion:nil];
        }
     }];
 }
@@ -56,6 +57,10 @@
 
         [self.arrayOfUsers addObjectsFromArray:[userQuery findObjects]]; //:self.arrayOfUsers block:^(NSArray<PFUser *> * _Nullable
     }
+}
+
+- (IBAction)didTapCancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

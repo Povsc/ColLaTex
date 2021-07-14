@@ -236,7 +236,7 @@
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Z2K-YQ-o3G" kind="show" identifier="toCreateDocument" id="lFI-G7-td9"/>
+                                    <segue destination="hgi-MJ-6LE" kind="presentation" identifier="toCreateDocument" modalPresentationStyle="fullScreen" id="lFI-G7-td9"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-OU-QVB">
@@ -368,6 +368,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Document" id="iSo-26-0Bv">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="J2h-0m-UWK">
+                            <connections>
+                                <action selector="didTapCancel:" destination="Z2K-YQ-o3G" id="eq4-Xi-DNV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create" id="0tX-i6-Luv">
                             <connections>
                                 <action selector="didTapCreate:" destination="Z2K-YQ-o3G" id="Bg9-KU-n4T"/>
@@ -382,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XR-rJ-9uB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1315.3846153846152" y="3133.649289099526"/>
+            <point key="canvasLocation" x="-2158" y="3864"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xcu-Vy-Rra">
@@ -459,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Tl-yIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117.39130434782609" y="3133.9285714285711"/>
+            <point key="canvasLocation" x="-115" y="3134"/>
         </scene>
         <!--Shared with Me-->
         <scene sceneID="k1G-yl-Cim">
@@ -643,6 +648,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2p-LH-aOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1699" y="1687"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8QT-DW-g02">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgi-MJ-6LE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="IDr-qM-Tx0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSc-l9-oue">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z2K-YQ-o3G" kind="relationship" relationship="rootViewController" id="TR0-ek-VBg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dp-e1-ddJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2158" y="3134"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
