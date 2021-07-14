@@ -8,10 +8,11 @@
 #import "ComposeViewController.h"
 @import Parse;
 
-@interface ComposeViewController ()
+@interface ComposeViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *contentLabel;
 @property (weak, nonatomic) IBOutlet UIView *buttonView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 
 @end
 
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.contentLabel.delegate = self;
     
     // Bring button to front of view
     [self.view bringSubviewToFront:self.buttonView];
@@ -33,6 +35,16 @@
     [self.view endEditing:true];
 }
 
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    self.contentViewBottomConstraint.constant += 240;
+    [self.contentLabel updateConstraints];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    self.contentViewBottomConstraint.constant -= 240;
+    [self.contentLabel updateConstraints];
+}
 /*
 #pragma mark - Navigation
 

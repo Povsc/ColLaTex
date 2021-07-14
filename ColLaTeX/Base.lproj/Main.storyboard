@@ -447,7 +447,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39a-dI-JUw">
-                                <rect key="frame" x="16" y="197" width="358" height="557"/>
+                                <rect key="frame" x="16" y="197" width="358" height="551"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -473,7 +473,7 @@
                             <constraint firstItem="39a-dI-JUw" firstAttribute="top" secondItem="0aZ-Zv-hvB" secondAttribute="bottom" constant="8" symbolic="YES" id="YRn-Fs-2xS"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="39a-dI-JUw" secondAttribute="trailing" constant="16" id="ZwT-70-MUN"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="aRb-iU-YyU" secondAttribute="trailing" constant="20" id="aEl-ct-9eJ"/>
-                            <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="39a-dI-JUw" secondAttribute="bottom" constant="7" id="dcS-NE-cFx"/>
+                            <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="39a-dI-JUw" secondAttribute="bottom" constant="13" id="dcS-NE-cFx"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="0aZ-Zv-hvB" secondAttribute="trailing" constant="20" id="fLc-zq-1i8"/>
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="lrF-hj-TkN"/>
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="top" secondItem="0US-7F-nNx" secondAttribute="top" constant="17" id="pr2-Ec-OLd"/>
@@ -492,6 +492,7 @@
                     <connections>
                         <outlet property="buttonView" destination="aRb-iU-YyU" id="uqu-r2-mYW"/>
                         <outlet property="contentLabel" destination="39a-dI-JUw" id="PBs-Ai-Jp6"/>
+                        <outlet property="contentViewBottomConstraint" destination="dcS-NE-cFx" id="Sbn-b0-k2p"/>
                         <outlet property="titleLabel" destination="0aZ-Zv-hvB" id="bZr-V7-2ik"/>
                     </connections>
                 </viewController>
