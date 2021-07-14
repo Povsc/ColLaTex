@@ -28,6 +28,9 @@
     
     // Initialize array of users
     self.arrayOfUsers = [NSMutableArray new];
+    
+    // Begin editing titleField
+    [self.titleLabel becomeFirstResponder];
 }
 
 - (IBAction)didTapCreate:(id)sender {
