@@ -9,6 +9,7 @@
 #import "Document.h"
 @import Parse;
 #import "SharedCell.h"
+#import "ComposeViewController.h"
 
 @interface SharedWithMeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -63,15 +64,25 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Instantiate view controller
+    ComposeViewController *composeViewController = [segue destinationViewController];
+    SharedCell *tappedCell = sender;
+    
+    // Add document
+    composeViewController.document = tappedCell.document;
+
+    // Configure cell highlighting
+    tappedCell.highlighted = false;
 }
-*/
+
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     SharedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SharedCell"];

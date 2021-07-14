@@ -9,6 +9,7 @@
 #import "Document.h"
 #import "Parse/Parse.h"
 #import "MyDocumentCell.h"
+#import "ComposeViewController.h"
 
 @interface MyDocumentsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -65,15 +66,27 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if([segue.identifier isEqual:@"toComposeView"]) {
+        // Instantiate view controller
+        ComposeViewController *composeViewController = [segue destinationViewController];
+        MyDocumentCell *tappedCell = sender;
+    
+        // Add document
+        composeViewController.document = tappedCell.document;
+
+        // Configure cell highlighting
+        tappedCell.highlighted = false;
+    }
 }
-*/
+
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MyDocumentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyDocumentCell"];
