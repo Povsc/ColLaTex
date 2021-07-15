@@ -105,4 +105,29 @@
         [self saveInBackground];
     }
 }
+
++ (NSMutableArray <PFUser *> *) arrayOfUsersFromString:(NSString *)names {
+    // Separate each username
+    NSMutableArray *arrayOfNames = [[names componentsSeparatedByString:@", "] mutableCopy];
+    
+    // Create array of users
+    NSMutableArray <PFUser *> *arrayOfUsers = [NSMutableArray new];
+    
+    for (NSString *name in arrayOfNames){
+        // Create a new query for each name
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"username" equalTo:name];
+        userQuery.limit = 1;
+
+        [arrayOfUsers addObjectsFromArray:[userQuery findObjects]];
+    }
+    
+    return arrayOfUsers;
+}
+
+- (void)updateSharedArrayWithString:(NSString *)string{
+    self.sharedWith = [Document arrayOfUsersFromString:string];
+    [self saveInBackground];
+    
+}
 @end

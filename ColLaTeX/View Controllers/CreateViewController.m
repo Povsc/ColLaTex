@@ -26,15 +26,15 @@
     self.contentView.layer.cornerRadius = 30;
     self.contentView.layer.masksToBounds = true;
     
-    // Initialize array of users
-    self.arrayOfUsers = [NSMutableArray new];
-    
     // Begin editing titleField
     [self.titleLabel becomeFirstResponder];
 }
 
 - (IBAction)didTapCreate:(id)sender {
-    [self arrayOfUsersFromString:self.sharedLabel.text];
+    // Get array of users
+    self.arrayOfUsers = [Document arrayOfUsersFromString:self.sharedLabel.text];
+    
+    // Create a new document
     [Document newDocumentNamed:self.titleLabel.text
                 withUsersArray:self.arrayOfUsers
                 withCompletion:^(BOOL succeeded, NSError * error) {
@@ -46,20 +46,6 @@
            [self dismissViewControllerAnimated:YES completion:nil];
        }
     }];
-}
-
-- (void) arrayOfUsersFromString:(NSString *)names {
-    // Separate each username
-    NSMutableArray *arrayOfNames = [[names componentsSeparatedByString:@", "] mutableCopy];
-    
-    for (NSString *name in arrayOfNames){
-        // Create a new query for each name
-        PFQuery *userQuery = [PFUser query];
-        [userQuery whereKey:@"username" equalTo:name];
-        userQuery.limit = 1;
-
-        [self.arrayOfUsers addObjectsFromArray:[userQuery findObjects]]; //:self.arrayOfUsers block:^(NSArray<PFUser *> * _Nullable
-    }
 }
 
 - (IBAction)didTapCancel:(id)sender {

@@ -27,4 +27,8 @@
 
 - (void)updateNameWithString:(NSString *)string;
 
++ (NSMutableArray <PFUser *> *)arrayOfUsersFromString:(NSString *)names;
+
+- (void)updateSharedArrayWithString:(NSString *)string;
+
 @end
