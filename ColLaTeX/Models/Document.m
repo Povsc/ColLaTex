@@ -98,4 +98,11 @@
         [self save];
     }
 }
+
+- (void)updateNameWithString:(NSString *)string{
+    if (![string isEqual:self.name]){
+        self.name = string;
+        [self saveInBackground];
+    }
+}
 @end

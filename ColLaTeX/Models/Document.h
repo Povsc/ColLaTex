@@ -25,4 +25,6 @@
 
 - (void)updateContentWithString:(NSString *)string;
 
+- (void)updateNameWithString:(NSString *)string;
+
 @end
