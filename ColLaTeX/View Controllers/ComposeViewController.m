@@ -9,6 +9,7 @@
 #import "ContentViewController.h"
 #import "PDFKit/PDFKit.h"
 @import Parse;
+#import "SettingsViewController.h"
 
 @interface ComposeViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -64,6 +65,10 @@
         UINavigationController *navigationController = segue.destinationViewController;
         ContentViewController *pdfViewController = navigationController.topViewController;
         pdfViewController.document = self.document;
+    }
+    else{
+        SettingsViewController *settingsViewController = [segue destinationViewController];
+        settingsViewController.document = self.document;
     }
 }
 

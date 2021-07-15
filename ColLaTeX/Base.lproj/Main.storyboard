@@ -553,7 +553,7 @@
                     <navigationItem key="navigationItem" id="knO-B1-Q3z">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="lyi-oZ-Kc9">
                             <connections>
-                                <segue destination="hIt-fI-GF9" kind="show" id="r60-Xi-7yn"/>
+                                <segue destination="hIt-fI-GF9" kind="show" identifier="toSettings" id="r60-Xi-7yn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
