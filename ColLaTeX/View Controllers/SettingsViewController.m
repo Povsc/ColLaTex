@@ -29,6 +29,8 @@
 }
 
 - (IBAction)didTapSave:(id)sender {
+    [self.document updateNameWithString:self.titleField.text];
+    [self.document updateSharedArrayWithString:self.shareField.text];
 }
 
 - (NSString *)stringWithArray{
