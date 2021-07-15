@@ -37,6 +37,7 @@
     
     // Append each username to array
     for (PFUser *user in arrayOfUsers){
+        [user fetch];
         [arrayOfNames addObject:user.username];
     }
     
