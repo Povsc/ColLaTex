@@ -81,6 +81,9 @@
 
     // Configure cell highlighting
     tappedCell.highlighted = false;
+    
+    // Set ownership of document
+    composeViewController.owner = false;
 }
 
 

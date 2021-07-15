@@ -37,6 +37,11 @@
     // Configure labels
     self.titleLabel.text = self.document.name;
     self.contentLabel.text = self.document.content;
+    
+    // Remove settings if not owner
+    if (!self.owner){
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (IBAction)didTapScreen:(id)sender {
