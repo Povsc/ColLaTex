@@ -681,10 +681,14 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRO-lv-aDw" customClass="PFImageView">
                                 <rect key="frame" x="20" y="123" width="100" height="100"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="eDx-u1-fiR"/>
                                     <constraint firstAttribute="width" constant="100" id="pVK-qJ-i2v"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Y6l-zo-UTZ" appends="YES" id="r0r-p4-Bbd"/>
+                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" translatesAutoresizingMaskIntoConstraints="NO" id="rhL-jz-3ic">
                                 <rect key="frame" x="128" y="123" width="242" height="71"/>
@@ -725,13 +729,28 @@
                     <navigationItem key="navigationItem" title="Profile" id="Me3-n6-Wkt">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="is4-zJ-602">
                             <connections>
-                                <action selector="didTapLogOut:" destination="azy-k7-vzv" id="V8q-7L-Tat"/>
+                                <action selector="didTapLeftBarButton:" destination="azy-k7-vzv" id="V8q-7L-Tat"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="WBQ-y0-V4Q"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="WBQ-y0-V4Q">
+                            <connections>
+                                <action selector="didTapRightBarButton:" destination="azy-k7-vzv" id="oAk-6R-8UM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="createdAtLabel" destination="QpS-o8-EUx" id="zOT-9f-CsC"/>
+                        <outlet property="emailField" destination="feU-RF-ISg" id="n0j-OF-AUo"/>
+                        <outlet property="profileImageView" destination="eRO-lv-aDw" id="b0s-uK-JZ2"/>
+                        <outlet property="usernameField" destination="rhL-jz-3ic" id="ST9-dW-aAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8r-Jc-dyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y6l-zo-UTZ">
+                    <connections>
+                        <action selector="didTapSetPicture:" destination="azy-k7-vzv" id="QaP-t1-1Sx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1698.4615384615383" y="2400.7109004739336"/>
         </scene>
