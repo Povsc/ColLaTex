@@ -414,7 +414,7 @@
         <!--Settings-->
         <scene sceneID="gdN-sG-jDA">
             <objects>
-                <viewController id="hIt-fI-GF9" sceneMemberID="viewController">
+                <viewController id="hIt-fI-GF9" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M2B-mL-Qv1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,8 +473,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="P6H-El-TSV">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="CBk-iQ-LI0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="CBk-iQ-LI0">
+                            <connections>
+                                <action selector="didTapSave:" destination="hIt-fI-GF9" id="Ihv-9c-rAi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="shareField" destination="32z-tj-k9d" id="rqy-ys-Dx2"/>
+                        <outlet property="titleField" destination="EFK-14-RMZ" id="Qbt-6p-6TL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSc-3r-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
