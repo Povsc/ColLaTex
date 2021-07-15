@@ -672,8 +672,55 @@
                     <view key="view" contentMode="scaleToFill" id="HsY-7n-Cfy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created: MM/DD/YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpS-o8-EUx">
+                                <rect key="frame" x="20" y="261" width="164" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRO-lv-aDw" customClass="PFImageView">
+                                <rect key="frame" x="20" y="123" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eDx-u1-fiR"/>
+                                    <constraint firstAttribute="width" constant="100" id="pVK-qJ-i2v"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" translatesAutoresizingMaskIntoConstraints="NO" id="rhL-jz-3ic">
+                                <rect key="frame" x="128" y="123" width="242" height="71"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="VCh-xe-1ec"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="email@email.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="feU-RF-ISg">
+                                <rect key="frame" x="124" y="189" width="246" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="LJn-D1-lV9"/>
+                                </constraints>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CUk-ws-np6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CUk-ws-np6" firstAttribute="trailing" secondItem="rhL-jz-3ic" secondAttribute="trailing" constant="20" id="7JC-RU-iaZ"/>
+                            <constraint firstItem="rhL-jz-3ic" firstAttribute="top" secondItem="CUk-ws-np6" secondAttribute="top" constant="35" id="G9f-mi-oe5"/>
+                            <constraint firstItem="eRO-lv-aDw" firstAttribute="leading" secondItem="CUk-ws-np6" secondAttribute="leading" constant="20" id="KiH-Pe-kIl"/>
+                            <constraint firstItem="QpS-o8-EUx" firstAttribute="top" secondItem="eRO-lv-aDw" secondAttribute="bottom" constant="38" id="LuY-4m-cXa"/>
+                            <constraint firstItem="QpS-o8-EUx" firstAttribute="leading" secondItem="CUk-ws-np6" secondAttribute="leading" constant="20" id="OnX-BK-zDT"/>
+                            <constraint firstItem="feU-RF-ISg" firstAttribute="leading" secondItem="eRO-lv-aDw" secondAttribute="trailing" constant="4" id="QtB-qj-n8O"/>
+                            <constraint firstItem="rhL-jz-3ic" firstAttribute="leading" secondItem="eRO-lv-aDw" secondAttribute="trailing" constant="8" symbolic="YES" id="brE-bO-cVg"/>
+                            <constraint firstItem="feU-RF-ISg" firstAttribute="top" secondItem="CUk-ws-np6" secondAttribute="top" constant="101" id="h7b-KU-IaU"/>
+                            <constraint firstItem="CUk-ws-np6" firstAttribute="trailing" secondItem="feU-RF-ISg" secondAttribute="trailing" constant="20" id="lap-CK-gIp"/>
+                            <constraint firstItem="eRO-lv-aDw" firstAttribute="top" secondItem="CUk-ws-np6" secondAttribute="top" constant="35" id="ljh-QY-VVx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Me3-n6-Wkt">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="is4-zJ-602">
@@ -681,11 +728,12 @@
                                 <action selector="didTapLogOut:" destination="azy-k7-vzv" id="V8q-7L-Tat"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="WBQ-y0-V4Q"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8r-Jc-dyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="2401"/>
+            <point key="canvasLocation" x="1698.4615384615383" y="2400.7109004739336"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sMJ-y0-Hc1">
