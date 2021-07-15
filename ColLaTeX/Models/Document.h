@@ -23,6 +23,6 @@
 
 - (NSString *)URLString;
 
-- (void)updateContentWithString:(NSString *)string;
+- (void)updateContentWithString:(NSString *)string withCompletion:(PFBooleanResultBlock  _Nullable)completion;
 
 @end

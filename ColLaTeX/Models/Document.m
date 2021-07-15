@@ -87,15 +87,11 @@
     return urlString;
 }
 
-- (void)updateContentWithString:(NSString *)string{
+- (void)updateContentWithString:(NSString *)string withCompletion:(PFBooleanResultBlock  _Nullable)completion{
     // Update content
     self.content = string;
     
     // Save in cloud
-    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
-        if (error){
-            NSLog(@"Error: %@", error.localizedDescription);
-        }
-    }];
+    [self saveInBackgroundWithBlock:completion];
 }
 @end
