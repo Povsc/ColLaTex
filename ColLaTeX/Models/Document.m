@@ -87,11 +87,15 @@
     return urlString;
 }
 
-- (void)updateContentWithString:(NSString *)string withCompletion:(PFBooleanResultBlock  _Nullable)completion{
-    // Update content
-    self.content = string;
+- (void)updateContentWithString:(NSString *)string{
     
-    // Save in cloud
-    [self saveInBackgroundWithBlock:completion];
+    // Check if it's different
+    if(![string isEqual:self.content]){
+        // Update content
+        self.content = string;
+        
+        // Save in cloud
+        [self save];
+    }
 }
 @end

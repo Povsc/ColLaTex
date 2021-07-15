@@ -59,11 +59,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    [self.document updateContentWithString:self.contentLabel.text];
     if ([segue.identifier isEqual:@"toPDF"]){
         UINavigationController *navigationController = segue.destinationViewController;
         ContentViewController *pdfViewController = navigationController.topViewController;
         pdfViewController.document = self.document;
     }
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+    [self.document updateContentWithString:self.contentLabel.text];
 }
 
 
