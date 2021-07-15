@@ -418,10 +418,63 @@
                     <view key="view" contentMode="scaleToFill" id="M2B-mL-Qv1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-v8-s3W">
+                                <rect key="frame" x="16" y="121" width="358" height="251"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86g-TK-sNG">
+                                        <rect key="frame" x="19" y="30" width="44" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFK-14-RMZ">
+                                        <rect key="frame" x="19" y="65" width="319" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share with:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht2-T9-QT4">
+                                        <rect key="frame" x="19" y="122" width="101" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32z-tj-k9d">
+                                        <rect key="frame" x="19" y="157" width="319" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="32z-tj-k9d" firstAttribute="leading" secondItem="EFK-14-RMZ" secondAttribute="leading" id="0em-GK-aPc"/>
+                                    <constraint firstItem="86g-TK-sNG" firstAttribute="top" secondItem="CHY-v8-s3W" secondAttribute="top" constant="30" id="5sr-sC-LVb"/>
+                                    <constraint firstItem="ht2-T9-QT4" firstAttribute="leading" secondItem="86g-TK-sNG" secondAttribute="leading" id="8wy-yg-TYD"/>
+                                    <constraint firstItem="32z-tj-k9d" firstAttribute="trailing" secondItem="EFK-14-RMZ" secondAttribute="trailing" id="960-38-pOd"/>
+                                    <constraint firstItem="86g-TK-sNG" firstAttribute="leading" secondItem="CHY-v8-s3W" secondAttribute="leading" constant="19" id="CUV-hN-p3A"/>
+                                    <constraint firstItem="86g-TK-sNG" firstAttribute="leading" secondItem="CHY-v8-s3W" secondAttribute="leading" constant="19" id="RrG-z3-V1l"/>
+                                    <constraint firstAttribute="height" constant="251" id="ccr-KB-NQm"/>
+                                    <constraint firstItem="EFK-14-RMZ" firstAttribute="leading" secondItem="CHY-v8-s3W" secondAttribute="leading" constant="19" id="f1j-Pr-7Mo"/>
+                                    <constraint firstItem="ht2-T9-QT4" firstAttribute="top" secondItem="EFK-14-RMZ" secondAttribute="bottom" constant="23" id="fm0-X7-fLH"/>
+                                    <constraint firstItem="32z-tj-k9d" firstAttribute="top" secondItem="ht2-T9-QT4" secondAttribute="bottom" constant="8" symbolic="YES" id="lrf-dn-7RG"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="32z-tj-k9d" secondAttribute="bottom" constant="20" id="mHy-iW-f8l"/>
+                                    <constraint firstItem="ht2-T9-QT4" firstAttribute="leading" secondItem="CHY-v8-s3W" secondAttribute="leading" constant="19" id="p19-hQ-K3e"/>
+                                    <constraint firstAttribute="trailing" secondItem="EFK-14-RMZ" secondAttribute="trailing" constant="20" id="qf9-z1-klx"/>
+                                    <constraint firstItem="EFK-14-RMZ" firstAttribute="top" secondItem="86g-TK-sNG" secondAttribute="bottom" constant="8" symbolic="YES" id="qyg-lA-zYy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-R7-u7M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CHY-v8-s3W" firstAttribute="leading" secondItem="acR-R7-u7M" secondAttribute="leading" constant="16" id="XoO-QO-Utq"/>
+                            <constraint firstItem="acR-R7-u7M" firstAttribute="trailing" secondItem="CHY-v8-s3W" secondAttribute="trailing" constant="16" id="if4-zY-gww"/>
+                            <constraint firstItem="CHY-v8-s3W" firstAttribute="top" secondItem="acR-R7-u7M" secondAttribute="top" constant="33" id="jf2-N7-Byl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="P6H-El-TSV"/>
+                    <navigationItem key="navigationItem" title="Settings" id="P6H-El-TSV">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="CBk-iQ-LI0"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSc-3r-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
