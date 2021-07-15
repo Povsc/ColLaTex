@@ -86,4 +86,16 @@
     NSString *urlString = [NSString stringWithFormat:@"https://latexonline.cc/compile?text=%@", encodedUrl];
     return urlString;
 }
+
+- (void)updateContentWithString:(NSString *)string{
+    // Update content
+    self.content = string;
+    
+    // Save in cloud
+    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
+        if (error){
+            NSLog(@"Error: %@", error.localizedDescription);
+        }
+    }];
+}
 @end

@@ -23,4 +23,6 @@
 
 - (NSString *)URLString;
 
+- (void)updateContentWithString:(NSString *)string;
+
 @end
