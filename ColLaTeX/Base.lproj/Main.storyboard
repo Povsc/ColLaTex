@@ -713,6 +713,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CUk-ws-np6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CUk-ws-np6" firstAttribute="trailing" secondItem="rhL-jz-3ic" secondAttribute="trailing" constant="20" id="7JC-RU-iaZ"/>
                             <constraint firstItem="rhL-jz-3ic" firstAttribute="top" secondItem="CUk-ws-np6" secondAttribute="top" constant="35" id="G9f-mi-oe5"/>
@@ -725,6 +726,9 @@
                             <constraint firstItem="CUk-ws-np6" firstAttribute="trailing" secondItem="feU-RF-ISg" secondAttribute="trailing" constant="20" id="lap-CK-gIp"/>
                             <constraint firstItem="eRO-lv-aDw" firstAttribute="top" secondItem="CUk-ws-np6" secondAttribute="top" constant="35" id="ljh-QY-VVx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="H9A-Pe-5KE" appends="YES" id="IWi-dK-flw"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Me3-n6-Wkt">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="is4-zJ-602">
@@ -749,6 +753,11 @@
                 <tapGestureRecognizer id="Y6l-zo-UTZ">
                     <connections>
                         <action selector="didTapSetPicture:" destination="azy-k7-vzv" id="QaP-t1-1Sx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="H9A-Pe-5KE">
+                    <connections>
+                        <action selector="didTapScreen:" destination="azy-k7-vzv" id="uZN-CT-RcE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -179,6 +179,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)didTapScreen:(id)sender {
+    [self.view endEditing:true];
+}
+
 /*
 #pragma mark - Navigation
 
