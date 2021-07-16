@@ -479,11 +479,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-R7-u7M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CHY-v8-s3W" firstAttribute="leading" secondItem="acR-R7-u7M" secondAttribute="leading" constant="16" id="Bl3-mA-PUe"/>
                             <constraint firstItem="CHY-v8-s3W" firstAttribute="top" secondItem="acR-R7-u7M" secondAttribute="top" constant="20" id="e7Q-Uq-xyb"/>
                             <constraint firstItem="acR-R7-u7M" firstAttribute="trailing" secondItem="CHY-v8-s3W" secondAttribute="trailing" constant="16" id="pdX-Dc-jPT"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ilu-z8-TzG" appends="YES" id="nT4-KL-Ii2"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="P6H-El-TSV">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="CBk-iQ-LI0">
@@ -499,6 +503,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSc-3r-0DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ilu-z8-TzG">
+                    <connections>
+                        <action selector="didTapScreen:" destination="hIt-fI-GF9" id="Xyd-cM-6hE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="487.69230769230768" y="4593.8388625592415"/>
         </scene>
