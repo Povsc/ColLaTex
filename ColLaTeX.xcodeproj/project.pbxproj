@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06819F46EA19BBCD0C2090A2 /* Pods_ColLaTeXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B21645CDC2BB75436127C5 /* Pods_ColLaTeXTests.framework */; };
 		65CE784CE8445562AD38AFA3 /* Pods_ColLaTeX_ColLaTeXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */; };
+		C9950DC326A1EC2300B08F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9950DC226A1EC2200B08F5B /* Assets.xcassets */; };
 		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
 		C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0445269CD39900926C35 /* SceneDelegate.m */; };
 		C9BF044C269CD39900926C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF044A269CD39900926C35 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		9749783729D4CBAA8A083BB3 /* Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig"; path = "Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C29CF37FA8ACAA98925BE6B3 /* Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeX-ColLaTeXUITests/Pods-ColLaTeX-ColLaTeXUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9950DC226A1EC2200B08F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9BF043E269CD39900926C35 /* ColLaTeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColLaTeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BF0441269CD39900926C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9BF0442269CD39900926C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				C9BF0445269CD39900926C35 /* SceneDelegate.m */,
 				C9BF044A269CD39900926C35 /* Main.storyboard */,
 				C9BF044D269CD39A00926C35 /* Assets.xcassets */,
+				C9950DC226A1EC2200B08F5B /* Assets.xcassets */,
 				C9BF044F269CD39A00926C35 /* LaunchScreen.storyboard */,
 				C9BF0452269CD39A00926C35 /* Info.plist */,
 				C9BF0453269CD39A00926C35 /* main.m */,
@@ -387,6 +390,7 @@
 				C9BF0451269CD39A00926C35 /* LaunchScreen.storyboard in Resources */,
 				C9BF044E269CD39A00926C35 /* Assets.xcassets in Resources */,
 				C9BF044C269CD39900926C35 /* Main.storyboard in Resources */,
+				C9950DC326A1EC2300B08F5B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
