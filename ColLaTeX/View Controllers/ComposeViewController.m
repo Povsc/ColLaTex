@@ -34,6 +34,10 @@
     self.buttonView.frame.size.height /2;
     self.buttonView.layer.masksToBounds = true;
     
+    // Give text view rounded corners
+    self.contentLabel.layer.cornerRadius = 20;
+    self.contentLabel.layer.masksToBounds = true;
+    
     // Configure labels
     self.titleLabel.text = self.document.name;
     self.contentLabel.text = self.document.content;
