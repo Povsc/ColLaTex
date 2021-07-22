@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *contentLabel;
 @property (weak, nonatomic) IBOutlet UIView *buttonView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
+@property (nonatomic) int keyboardOffset;
 
 @end
 
@@ -25,6 +26,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.contentLabel.delegate = self;
+    
+    // Set keyboardOffset
+    self.keyboardOffset = 240;
     
     // Bring button to front of view
     [self.view bringSubviewToFront:self.buttonView];
@@ -54,12 +58,12 @@
 
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
-    self.contentViewBottomConstraint.constant += 240;
+    self.contentViewBottomConstraint.constant += self.keyboardOffset;
     [self.contentLabel updateConstraints];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    self.contentViewBottomConstraint.constant -= 240;
+    self.contentViewBottomConstraint.constant -= self.keyboardOffset;
     [self.contentLabel updateConstraints];
 }
 
