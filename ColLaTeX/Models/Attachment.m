@@ -12,6 +12,11 @@
 @dynamic docID;
 @dynamic name;
 @dynamic picture;
+@dynamic document;
+
++ (nonnull NSString *)parseClassName {
+    return @"Attachment";
+}
 
 + (void) newAttachmentNamed: (NSString *)name withFile:  (PFFileObject *) file withDocument: (Document *) document withCompletion: (PFBooleanResultBlock  _Nullable)completion {
     

@@ -13,7 +13,6 @@
 @dynamic owner;
 @dynamic content;
 @dynamic name;
-@dynamic attachments;
 @dynamic sharedWith;
 @dynamic compiler;
 
@@ -48,7 +47,6 @@
     
     // Set content and attachments
     newDoc.content = [beginning stringByAppendingFormat: @"%@", end];
-    newDoc.attachments = [NSMutableArray new];
     
     [newDoc saveInBackgroundWithBlock: completion];
 }

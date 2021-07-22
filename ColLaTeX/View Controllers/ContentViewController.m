@@ -7,12 +7,13 @@
 
 #import "ContentViewController.h"
 #import "PDFKit/PDFKit.h"
+#import "Attachment.h"
 
 @interface ContentViewController ()
 
 @property (strong, nonatomic) PDFDocument *pdf;
 @property (strong, nonatomic) NSString *urlString;
-@property (strong, nonatomic) NSMutableSet <Attachment *> *arrayOfAttachments;
+@property (strong, nonatomic) NSArray <Attachment *> *arrayOfAttachments;
 
 @end
 
@@ -22,6 +23,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Create a new query
+    PFQuery *attachmentQuery = [Attachment query];
+    [attachmentQuery whereKey:@"document" equalTo:self.document];
+    [attachmentQuery orderByDescending:@"updatedAt"];
+    
+    // Add attachments
+    [attachmentQuery findObjectsInBackgroundWithBlock:^(NSArray<Attachment *> * _Nullable documents, NSError * _Nullable error) {
+       if (documents) {
+           self.arrayOfAttachments = [documents mutableCopy];
+           [self postRequest];
+       }
+       else {
+           NSLog(@"Error: %@", error.localizedDescription);
+       }
+    }];
+}
+
+- (IBAction)didTapCancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+    
+- (void) postRequest{
     // Set url
     self.urlString = @"https://latex.ytotech.com/builds/sync";
     
@@ -31,12 +54,12 @@
     //Create json dictionary
     NSDictionary *dict = @{
         @"compiler": self.document.compiler,
-        @"resources": @[
+        @"resources": [@[
              @{
                 @"main": @true,
                 @"content": self.document.content
             }
-        ]
+        ] mutableCopy]
     };
     
     // Add pictures to dictionary
@@ -93,9 +116,6 @@
 
                                             }];
     [task resume];
-}
-- (IBAction)didTapCancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
