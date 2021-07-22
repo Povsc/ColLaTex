@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) PDFDocument *pdf;
 @property (strong, nonatomic) NSString *urlString;
+@property (strong, nonatomic) NSMutableSet <Attachment *> *arrayOfAttachments;
 
 @end
 
@@ -39,8 +40,12 @@
     };
     
     // Add pictures to dictionary
-    for (NSData *data in self.document.attachments){
-        //TODO: Add url and name
+    for (Attachment *attachment in self.arrayOfAttachments){
+        NSDictionary *newDict = @{
+            @"path": attachment.name,
+            @"url": attachment.picture.url
+        };
+        [dict[@"resources"] addObject:newDict];
     }
     
     // Convert to json
