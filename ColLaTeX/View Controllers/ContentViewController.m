@@ -22,37 +22,67 @@
     
     // Get view dimensions
     CGRect frame = self.view.frame;
+        
+    //Create json dictionary
+    NSDictionary *dict = @{
+        @"compiler": @"xelatex",
+        @"resources": @[
+             @{
+                @"main": @true,
+                @"content": self.document.content
+            }
+        ]
+    };
     
-    // Create URL
-    NSString *urlString = [self.document URLString];
-    NSURL *url = [NSURL URLWithString:urlString];
+    // Add pictures to dictionary
+    for (NSData *data in self.document.attachments){
+        //TODO: Add url and name
+    }
     
-    // Create request
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:20.0];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    // Convert to json
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
     
-    // Retireve data from url
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-           if (error != nil) {
-               NSLog(@"Error: %@", error.localizedDescription);
-           }
-           else {
-               // Convert data to pdf
-               PDFDocument *pdf = [[PDFDocument alloc] initWithData:data];
-               self.pdf = pdf;
-               
-               // Create PDFView
-               PDFView *pdfView = [[PDFView alloc] initWithFrame:frame];               
-               // Configure PDFView
-               pdfView.document = self.pdf;
-               pdfView.displayMode = kPDFDisplaySinglePageContinuous;
-               pdfView.autoScales = true;
-               self.view = pdfView;
-               
-               [self.view reloadInputViews];
-           }
-    }];
-    
+    // Create POST request
+    NSMutableURLRequest *request = [NSMutableURLRequest new];
+    request.HTTPMethod = @"POST";
+
+    // Pass url and json parameters
+    [request setURL:[NSURL URLWithString:@"https://latex.ytotech.com/builds/sync"]];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:jsonData];
+
+    // Configure session and task
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config
+                                                          delegate:nil
+                                                     delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData * _Nullable data,
+                                                                NSURLResponse * _Nullable response,
+                                                                NSError * _Nullable error) {
+
+        if (error != nil) {
+            NSLog(@"Error: %@", error.localizedDescription);
+        }
+        else {
+            // Convert data to pdf
+            PDFDocument *pdf = [[PDFDocument alloc] initWithData:data];
+            self.pdf = pdf;
+            
+            // Create PDFView
+            PDFView *pdfView = [[PDFView alloc] initWithFrame:frame];
+            // Configure PDFView
+            pdfView.document = self.pdf;
+            pdfView.displayMode = kPDFDisplaySinglePageContinuous;
+            pdfView.autoScales = true;
+            self.view = pdfView;
+            
+            [self.view reloadInputViews];
+        }
+
+                                            }];
     [task resume];
 }
 - (IBAction)didTapCancel:(id)sender {
