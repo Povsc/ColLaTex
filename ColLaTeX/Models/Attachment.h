@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) PFFileObject *picture;
 
++ (void) newAttachmentNamed: (NSString *)name withFile: (PFFileObject *) file withCompletion: (PFBooleanResultBlock  _Nullable)completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
