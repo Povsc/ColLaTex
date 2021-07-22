@@ -6,6 +6,7 @@
 //
 
 #import <Parse/Parse.h>
+#import "Document.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *docID;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) PFFileObject *picture;
+@property (nonatomic, strong) Document *document;
 
 + (void) newAttachmentNamed: (NSString *)name withFile: (PFFileObject *) file withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 
