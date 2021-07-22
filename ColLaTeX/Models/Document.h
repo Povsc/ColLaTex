@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "Attachment.h"
 
 @interface Document : PFObject<PFSubclassing>
 
@@ -14,7 +15,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) PFUser *owner;
 @property (nonatomic, strong) NSString *content;
-@property (nonatomic, strong) NSMutableArray <PFFileObject *> *attachments;
+@property (nonatomic, strong) NSMutableArray <Attachment *> *attachments;
 @property (nonatomic, strong) NSMutableArray *sharedWith;
 @property (nonatomic, strong) NSString *compiler;
 
