@@ -21,8 +21,6 @@
 
 - (NSString *)stringWithDate;
 
-- (NSString *)URLString;
-
 - (void)updateContentWithString:(NSString *)string;
 
 - (void)updateNameWithString:(NSString *)string;
