@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSMutableArray <PFFileObject *> *attachments;
 @property (nonatomic, strong) NSMutableArray *sharedWith;
+@property (nonatomic, strong) NSString *compiler;
 
 + (void) newDocumentNamed: (NSString *)name withUsersArray: ( NSArray <PFUser *> *) arrayOfUsers withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 

@@ -15,6 +15,7 @@
 @dynamic name;
 @dynamic attachments;
 @dynamic sharedWith;
+@dynamic compiler;
 
 + (nonnull NSString *)parseClassName {
     return @"Document";
@@ -27,6 +28,7 @@
     newDoc.name = name;
     newDoc.owner = [PFUser currentUser];
     newDoc.sharedWith = arrayOfUsers;
+    newDoc.compiler = @"xelatex";
     
     // Create an empty document with title
     NSString *beginning = [NSString stringWithFormat: @"\\documentclass[12pt]{article}\n"

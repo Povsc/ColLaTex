@@ -11,6 +11,7 @@
 @interface ContentViewController ()
 
 @property (strong, nonatomic) PDFDocument *pdf;
+@property (strong, nonatomic) NSString *urlString;
 
 @end
 
@@ -20,12 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Set url
+    self.urlString = @"https://latex.ytotech.com/builds/sync";
+    
     // Get view dimensions
     CGRect frame = self.view.frame;
         
     //Create json dictionary
     NSDictionary *dict = @{
-        @"compiler": @"xelatex",
+        @"compiler": self.document.compiler,
         @"resources": @[
              @{
                 @"main": @true,
@@ -48,7 +52,7 @@
     request.HTTPMethod = @"POST";
 
     // Pass url and json parameters
-    [request setURL:[NSURL URLWithString:@"https://latex.ytotech.com/builds/sync"]];
+    [request setURL:[NSURL URLWithString:self.urlString]];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setHTTPBody:jsonData];
