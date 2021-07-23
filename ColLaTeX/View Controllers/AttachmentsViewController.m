@@ -24,6 +24,20 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    // Instantiate refreshControl
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+    
+    // Load in data
+    [self beginRefresh:refreshControl];
+}
+
+- (void)beginRefresh:(UIRefreshControl *) refreshControl {
+    // Create array with only current user
+    NSMutableArray *userArray = [NSMutableArray new];
+    [userArray addObject:PFUser.currentUser];
+    
     // Create a new query
     PFQuery *attachmentQuery = [Attachment query];
     [attachmentQuery whereKey:@"document" equalTo:self.document];
@@ -37,7 +51,10 @@
        else {
            NSLog(@"Error: %@", error.localizedDescription);
        }
+        // Tell the refreshControl to stop spinning
+         [refreshControl endRefreshing];
         
+        // Reload data
         [self.tableView reloadData];
     }];
 }
