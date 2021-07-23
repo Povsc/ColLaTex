@@ -566,11 +566,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Images" id="rLF-q8-7JC">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="gcj-oI-tIV"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="gcj-oI-tIV">
+                            <connections>
+                                <segue destination="mTf-ZT-kDS" kind="presentation" modalPresentationStyle="fullScreen" id="pQR-wy-jxE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="REx-xZ-RrM" id="n6V-fI-mK3"/>
-                        <segue destination="mTf-ZT-kDS" kind="presentation" modalPresentationStyle="fullScreen" id="9QX-4a-K4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTl-yx-X0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1083,8 +1086,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ncm-Lo-9HP"/>
-        <segue reference="83o-u7-5UZ"/>
+        <segue reference="mdi-nP-qxq"/>
+        <segue reference="oY0-lf-guf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>

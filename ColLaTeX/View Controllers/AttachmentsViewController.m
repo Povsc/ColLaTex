@@ -8,6 +8,7 @@
 #import "AttachmentsViewController.h"
 #import "Attachment.h"
 #import "AttachmentCell.h"
+#import "AttachmentCreationViewController.h"
 
 @interface AttachmentsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -59,15 +60,16 @@
     }];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UINavigationController *navigationController = segue.destinationViewController;
+    AttachmentCreationViewController *createViewController = navigationController.topViewController;
+    createViewController.document = self.document;
 }
-*/
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     AttachmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttachmentCell"];
