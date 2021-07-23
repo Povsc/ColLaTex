@@ -524,7 +524,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="318" id="pxI-Om-gMj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttachmentCell" rowHeight="318" id="pxI-Om-gMj" customClass="AttachmentCell">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="404" height="318"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxI-Om-gMj" id="cZy-Xp-z87">
@@ -553,6 +553,10 @@
                                                 <constraint firstItem="H5P-bk-MO4" firstAttribute="centerX" secondItem="cZy-Xp-z87" secondAttribute="centerX" id="yYK-gq-ggg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="attachmentImage" destination="H5P-bk-MO4" id="SDp-ME-NlL"/>
+                                            <outlet property="nameField" destination="RVb-dL-Nsi" id="pc2-yL-bmj"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="WfG-JL-a1g">
                                         <rect key="frame" x="0.0" y="342.33333396911621" width="404" height="60"/>
@@ -1002,7 +1006,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mdi-nP-qxq"/>
-        <segue reference="oY0-lf-guf"/>
+        <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>

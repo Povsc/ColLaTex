@@ -7,8 +7,9 @@
 
 #import "AttachmentsViewController.h"
 #import "Attachment.h"
+#import "AttachmentCell.h"
 
-@interface AttachmentsViewController ()
+@interface AttachmentsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray <Attachment *> *arrayOfAttachments;
 
@@ -19,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
     // Create a new query
     PFQuery *attachmentQuery = [Attachment query];
@@ -33,6 +37,8 @@
        else {
            NSLog(@"Error: %@", error.localizedDescription);
        }
+        
+        [self.tableView reloadData];
     }];
 }
 
@@ -45,5 +51,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    AttachmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttachmentCell"];
+    
+    // Set label
+    Attachment *attachment = self.arrayOfAttachments[indexPath.row];
+    cell.nameField.text = attachment.name;
+    
+    // Configure Profile pic
+    cell.attachmentImage.file = attachment.picture;
+    [cell.attachmentImage loadInBackground];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.arrayOfAttachments.count;
+}
 
 @end
