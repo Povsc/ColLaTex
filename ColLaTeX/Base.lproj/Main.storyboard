@@ -577,10 +577,10 @@
             </objects>
             <point key="canvasLocation" x="1696.9230769230769" y="4593.8388625592415"/>
         </scene>
-        <!--View Controller-->
+        <!--Attachment Creation View Controller-->
         <scene sceneID="UA8-Vc-Dg4">
             <objects>
-                <viewController id="eNu-hO-aGM" sceneMemberID="viewController">
+                <viewController id="eNu-hO-aGM" customClass="AttachmentCreationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mdr-08-y8O">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -588,16 +588,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-Cx-WCq">
                                 <rect key="frame" x="29" y="112" width="332" height="290"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-0Q-3nX" customClass="PFImageView">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-0Q-3nX" customClass="PFImageView">
                                         <rect key="frame" x="63.666666666666686" y="8" width="205" height="205"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="205" id="qtf-i2-L2x"/>
                                             <constraint firstAttribute="height" constant="205" id="tP5-n0-h4D"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0vg-c1-9Z7" appends="YES" id="HOT-i9-wSe"/>
+                                        </connections>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-Bk-thN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name (e.g. image.png)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-Bk-thN">
                                         <rect key="frame" x="31" y="241" width="270" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -614,18 +618,44 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jsc-YE-m20"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19597392179528061" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ak3-Cx-WCq" firstAttribute="top" secondItem="Jsc-YE-m20" secondAttribute="top" constant="24" id="Pjl-gm-vdY"/>
                             <constraint firstItem="Jsc-YE-m20" firstAttribute="trailing" secondItem="ak3-Cx-WCq" secondAttribute="trailing" constant="29" id="Wf6-3g-PwI"/>
                             <constraint firstItem="ak3-Cx-WCq" firstAttribute="leading" secondItem="Jsc-YE-m20" secondAttribute="leading" constant="29" id="vr6-TH-awx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ga0-6p-Xz2" appends="YES" id="uOh-bw-Iqu"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="O9v-gr-313">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Rkd-33-R1O"/>
-                        <barButtonItem key="rightBarButtonItem" title="Complete" id="bPE-Ec-sdA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Rkd-33-R1O">
+                            <connections>
+                                <action selector="didTapCancel:" destination="eNu-hO-aGM" id="Tne-qp-PmQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="bPE-Ec-sdA">
+                            <connections>
+                                <action selector="didTapCreate:" destination="eNu-hO-aGM" id="caH-oh-8CW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="cD7-0Q-3nX" id="DwP-Pl-3AI"/>
+                        <outlet property="nameField" destination="dbm-Bk-thN" id="sO7-W2-iYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olb-zC-Xxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0vg-c1-9Z7">
+                    <connections>
+                        <action selector="didTapSetPicture:" destination="eNu-hO-aGM" id="FUc-ts-BZJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ga0-6p-Xz2">
+                    <connections>
+                        <action selector="didTapScreen:" destination="eNu-hO-aGM" id="zZ3-H9-7Ou"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1696.9230769230769" y="6057.5829383886257"/>
         </scene>
@@ -1053,7 +1083,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mdi-nP-qxq"/>
+        <segue reference="ncm-Lo-9HP"/>
         <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
