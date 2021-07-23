@@ -13,6 +13,7 @@
 @interface AttachmentCreationViewController () <UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet PFImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UIView *smallerView;
 
 @end
 
@@ -21,6 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Round corners of view
+    self.smallerView.layer.cornerRadius = 15;
+    self.smallerView.layer.masksToBounds = true;
+    
+    // Start setting picture
+    [self didTapSetPicture:nil];
 }
 
 - (IBAction)didTapSetPicture:(id)sender {

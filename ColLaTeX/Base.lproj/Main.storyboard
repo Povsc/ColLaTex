@@ -593,6 +593,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-0Q-3nX" customClass="PFImageView">
                                         <rect key="frame" x="63.666666666666686" y="8" width="205" height="205"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="205" id="qtf-i2-L2x"/>
@@ -620,7 +621,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jsc-YE-m20"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19597392179528061" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ak3-Cx-WCq" firstAttribute="top" secondItem="Jsc-YE-m20" secondAttribute="top" constant="24" id="Pjl-gm-vdY"/>
@@ -646,6 +647,7 @@
                     <connections>
                         <outlet property="imageView" destination="cD7-0Q-3nX" id="DwP-Pl-3AI"/>
                         <outlet property="nameField" destination="dbm-Bk-thN" id="sO7-W2-iYU"/>
+                        <outlet property="smallerView" destination="ak3-Cx-WCq" id="YKl-qr-Xz5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olb-zC-Xxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1086,7 +1088,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mdi-nP-qxq"/>
+        <segue reference="ncm-Lo-9HP"/>
         <segue reference="oY0-lf-guf"/>
     </inferredMetricsTieBreakers>
     <resources>
