@@ -10,6 +10,7 @@
 #import "PDFKit/PDFKit.h"
 @import Parse;
 #import "SettingsViewController.h"
+#import "AttachmentsViewController.h"
 
 @interface ComposeViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -84,9 +85,13 @@
         ContentViewController *pdfViewController = navigationController.topViewController;
         pdfViewController.document = self.document;
     }
-    else{
+    else if ([segue.identifier isEqual:@"toSettings"]){
         SettingsViewController *settingsViewController = [segue destinationViewController];
         settingsViewController.document = self.document;
+    }
+    else {
+        AttachmentsViewController *attachmentsViewController = [segue destinationViewController];
+        attachmentsViewController.document = self.document;
     }
 }
 

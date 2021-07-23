@@ -652,7 +652,7 @@
                                 </constraints>
                                 <state key="normal" title="Images"/>
                                 <connections>
-                                    <segue destination="6uW-7s-uYo" kind="show" id="hKd-H1-OXc"/>
+                                    <segue destination="6uW-7s-uYo" kind="show" identifier="toAttachment" id="hKd-H1-OXc"/>
                                 </connections>
                             </button>
                         </subviews>
