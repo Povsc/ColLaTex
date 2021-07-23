@@ -554,6 +554,32 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="WfG-JL-a1g">
+                                        <rect key="frame" x="0.0" y="342.33333396911621" width="404" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WfG-JL-a1g" id="sdW-DV-ayC">
+                                            <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-Wo-QPh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="dC9-p3-w6P"/>
+                                                    </constraints>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1XA-Wo-QPh" secondAttribute="trailing" id="Eld-0X-MiI"/>
+                                                <constraint firstAttribute="bottom" secondItem="1XA-Wo-QPh" secondAttribute="bottom" id="Izy-i0-Uy9"/>
+                                                <constraint firstItem="1XA-Wo-QPh" firstAttribute="leading" secondItem="sdW-DV-ayC" secondAttribute="leading" id="LCn-cb-gMU"/>
+                                                <constraint firstItem="1XA-Wo-QPh" firstAttribute="top" secondItem="sdW-DV-ayC" secondAttribute="top" id="oYY-Nt-Y2y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
