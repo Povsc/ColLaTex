@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *buttonView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 @property (nonatomic) int keyboardOffset;
+@property (weak, nonatomic) IBOutlet UIButton *imagesButton;
 
 @end
 
@@ -33,10 +34,14 @@
     // Bring button to front of view
     [self.view bringSubviewToFront:self.buttonView];
     
-    // Make button view circular
+    // Make buttons circular
     self.buttonView.layer.cornerRadius =
     self.buttonView.frame.size.height /2;
     self.buttonView.layer.masksToBounds = true;
+    
+    self.imagesButton.layer.cornerRadius =
+    self.imagesButton.frame.size.height /2;
+    self.imagesButton.layer.masksToBounds = true;
     
     // Give text view rounded corners
     self.contentLabel.layer.cornerRadius = 20;

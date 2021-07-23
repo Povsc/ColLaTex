@@ -554,11 +554,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1C5-Vh-S3X">
+                                <rect key="frame" x="297" y="594" width="73" height="73"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="RAh-VN-8TG"/>
+                                    <constraint firstAttribute="height" constant="73" id="YET-cF-YWP"/>
+                                </constraints>
+                                <state key="normal" title="Images"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0US-7F-nNx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="aRb-iU-YyU" firstAttribute="top" secondItem="1C5-Vh-S3X" secondAttribute="bottom" constant="8" symbolic="YES" id="BF8-J9-JCA"/>
                             <constraint firstItem="39a-dI-JUw" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="MtG-bZ-9yh"/>
                             <constraint firstItem="0US-7F-nNx" firstAttribute="bottom" secondItem="aRb-iU-YyU" secondAttribute="bottom" constant="13" id="UcW-bz-EiC"/>
                             <constraint firstItem="39a-dI-JUw" firstAttribute="top" secondItem="0aZ-Zv-hvB" secondAttribute="bottom" constant="8" symbolic="YES" id="YRn-Fs-2xS"/>
@@ -568,6 +578,7 @@
                             <constraint firstItem="0US-7F-nNx" firstAttribute="trailing" secondItem="0aZ-Zv-hvB" secondAttribute="trailing" constant="20" id="fLc-zq-1i8"/>
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="leading" secondItem="0US-7F-nNx" secondAttribute="leading" constant="16" id="lrF-hj-TkN"/>
                             <constraint firstItem="0aZ-Zv-hvB" firstAttribute="top" secondItem="0US-7F-nNx" secondAttribute="top" constant="17" id="pr2-Ec-OLd"/>
+                            <constraint firstItem="aRb-iU-YyU" firstAttribute="centerX" secondItem="1C5-Vh-S3X" secondAttribute="centerX" id="zqs-zN-tCg"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ivY-vA-cN7" appends="YES" id="ldA-Vv-oa6"/>
@@ -584,6 +595,7 @@
                         <outlet property="buttonView" destination="aRb-iU-YyU" id="uqu-r2-mYW"/>
                         <outlet property="contentLabel" destination="39a-dI-JUw" id="PBs-Ai-Jp6"/>
                         <outlet property="contentViewBottomConstraint" destination="dcS-NE-cFx" id="Sbn-b0-k2p"/>
+                        <outlet property="imagesButton" destination="1C5-Vh-S3X" id="7a4-Cb-VsE"/>
                         <outlet property="titleLabel" destination="0aZ-Zv-hvB" id="bZr-V7-2ik"/>
                     </connections>
                 </viewController>
