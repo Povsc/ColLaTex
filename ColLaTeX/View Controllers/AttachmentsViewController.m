@@ -57,7 +57,7 @@
     
     // Set label
     Attachment *attachment = self.arrayOfAttachments[indexPath.row];
-    cell.nameField.text = attachment.name;
+    cell.nameLabel.text = attachment.name;
     
     // Configure Profile pic
     cell.attachmentImage.file = attachment.picture;

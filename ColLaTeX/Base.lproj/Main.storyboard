@@ -538,24 +538,25 @@
                                                         <constraint firstAttribute="height" constant="205" id="cud-In-LXK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name (e.g. image.png)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVb-dL-Nsi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-Fm-Six">
                                                     <rect key="frame" x="56" y="246" width="292" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RVb-dL-Nsi" firstAttribute="top" secondItem="H5P-bk-MO4" secondAttribute="bottom" constant="30" id="3P2-Cc-OJc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RVb-dL-Nsi" secondAttribute="trailing" constant="36" id="5mv-Eb-wkZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="RVb-dL-Nsi" secondAttribute="bottom" constant="27" id="RZj-eY-UZO"/>
-                                                <constraint firstItem="RVb-dL-Nsi" firstAttribute="leading" secondItem="cZy-Xp-z87" secondAttribute="leadingMargin" constant="36" id="iBk-Pz-wcb"/>
+                                                <constraint firstItem="y8U-Fm-Six" firstAttribute="leading" secondItem="cZy-Xp-z87" secondAttribute="leadingMargin" constant="36" id="HEx-Zh-A6M"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="y8U-Fm-Six" secondAttribute="bottom" constant="27" id="Lmf-Ut-XID"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="y8U-Fm-Six" secondAttribute="trailing" constant="36" id="fDl-RK-Vbs"/>
+                                                <constraint firstItem="y8U-Fm-Six" firstAttribute="top" secondItem="H5P-bk-MO4" secondAttribute="bottom" constant="30" id="ksG-PN-mVp"/>
                                                 <constraint firstItem="H5P-bk-MO4" firstAttribute="top" secondItem="cZy-Xp-z87" secondAttribute="topMargin" id="plN-nV-MU0"/>
                                                 <constraint firstItem="H5P-bk-MO4" firstAttribute="centerX" secondItem="cZy-Xp-z87" secondAttribute="centerX" id="yYK-gq-ggg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="attachmentImage" destination="H5P-bk-MO4" id="SDp-ME-NlL"/>
-                                            <outlet property="nameField" destination="RVb-dL-Nsi" id="pc2-yL-bmj"/>
+                                            <outlet property="nameLabel" destination="y8U-Fm-Six" id="gZj-Ko-8wR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="WfG-JL-a1g">
