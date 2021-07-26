@@ -112,4 +112,46 @@
     return self.arrayOfDocuments.count;
 }
 
+-(id)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self getRowActions:tableView indexPath:indexPath];
+}
+-(id)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self getRowActions:tableView indexPath:indexPath];
+}
+-(id)getRowActions:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    
+    // Create new action
+    UIContextualAction *delete = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                                                             title:@"DELETE"
+                                                                           handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        Document *document = self.arrayOfDocuments[indexPath.row];
+        
+        // Remove current user and save
+        [document removeObject:PFUser.currentUser forKey:@"sharedWith"];
+        [document saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
+            if (succeeded){
+                // Instantiate refreshControl
+                UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+                [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+                [self.tableView insertSubview:refreshControl atIndex:0];
+                
+                // Load in data
+                [self beginRefresh:refreshControl];
+            }
+            else{
+                NSLog(@"Error:%@", error.localizedDescription);
+            }
+        }];
+                                                                               completionHandler(YES);
+                                                                           }];
+    
+    // Configure button
+    delete.backgroundColor = [UIColor redColor];
+    delete.image = [UIImage imageNamed:@"Trash.fill"];
+    
+    UISwipeActionsConfiguration *swipeActionConfig = [UISwipeActionsConfiguration configurationWithActions:@[delete]];
+    swipeActionConfig.performsFirstActionWithFullSwipe = NO;
+    return swipeActionConfig;
+}
+
 @end
