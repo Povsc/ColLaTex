@@ -85,7 +85,7 @@
         self.content = string;
         
         // Save in cloud
-        [self save];
+        [self saveInBackground];
     }
 }
 
