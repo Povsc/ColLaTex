@@ -57,7 +57,7 @@
     // Configure the input format to parse the date string
     formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
     // Compute how much time has passed
-    NSTimeInterval secondsSince = [self.createdAt timeIntervalSinceNow];
+    NSTimeInterval secondsSince = [self.updatedAt timeIntervalSinceNow];
     int seconds = secondsSince * (-1);
     int minutes = seconds / 60;
     int hours = minutes / 60;
@@ -72,11 +72,8 @@
     else if (hours < 24){
         return [NSString stringWithFormat:@"%dh ago", hours];
     }
-    else if (days < 7){
-        return [NSString stringWithFormat:@"%dd ago", days];
-    }
     else {
-        return [formatter stringFromDate:self.createdAt];
+        return [NSString stringWithFormat:@"%dd ago", days];
     }
 }
 
