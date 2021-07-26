@@ -396,8 +396,17 @@
                     <view key="view" contentMode="scaleToFill" id="hqd-rY-YqO" customClass="PDFView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jBh-cy-Ore">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wsd-hQ-Dws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jBh-cy-Ore" firstAttribute="centerX" secondItem="hqd-rY-YqO" secondAttribute="centerX" id="F78-zw-yZ3"/>
+                            <constraint firstItem="jBh-cy-Ore" firstAttribute="centerY" secondItem="hqd-rY-YqO" secondAttribute="centerY" id="tXd-bQ-Ijw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Ru-di-5xI">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="RI5-mW-C9j">
@@ -406,10 +415,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="jBh-cy-Ore" id="1Nf-M7-RG9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbV-Fo-DhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="5425"/>
+            <point key="canvasLocation" x="-726.15384615384608" y="5424.8815165876777"/>
         </scene>
         <!--Settings-->
         <scene sceneID="gdN-sG-jDA">

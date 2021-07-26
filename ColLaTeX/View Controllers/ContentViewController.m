@@ -14,6 +14,7 @@
 @property (strong, nonatomic) PDFDocument *pdf;
 @property (strong, nonatomic) NSString *urlString;
 @property (strong, nonatomic) NSArray <Attachment *> *arrayOfAttachments;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Animate Activity indicator
+    [self.activityIndicator startAnimating];
     
     // Create a new query
     PFQuery *attachmentQuery = [Attachment query];
@@ -116,6 +120,9 @@
 
                                             }];
     [task resume];
+    
+    // Stop Activity indicator
+    [self.activityIndicator startAnimating];
 }
 
 /*
