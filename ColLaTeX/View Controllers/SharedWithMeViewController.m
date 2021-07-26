@@ -115,9 +115,6 @@
 -(id)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self getRowActions:tableView indexPath:indexPath];
 }
--(id)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self getRowActions:tableView indexPath:indexPath];
-}
 -(id)getRowActions:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
     // Create new action
