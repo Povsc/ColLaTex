@@ -113,7 +113,17 @@
             pdfView.document = self.pdf;
             pdfView.displayMode = kPDFDisplaySinglePageContinuous;
             pdfView.autoScales = true;
-            self.view = pdfView;
+            [self.view addSubview:pdfView];
+            
+            // Make pdfView small
+            pdfView.transform = CGAffineTransformMakeScale(0.05, 0.05);
+            
+            // Animate pdfView growing
+            [UIView animateWithDuration:0.3
+                             animations:^{
+                                 pdfView.transform = CGAffineTransformIdentity;
+                             }
+                             completion:nil];
             
             [self.view reloadInputViews];
         }
