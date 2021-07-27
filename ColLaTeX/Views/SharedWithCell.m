@@ -6,6 +6,7 @@
 //
 
 #import "SharedWithCell.h"
+#import "UserCell.h"
 
 @implementation SharedWithCell
 
@@ -39,7 +40,7 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    SharedWithCell *cell = [SharedWithCell new];
+    UserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
     return cell;
 }
 

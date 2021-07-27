@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -316,16 +317,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bei-Rr-Cja">
                                 <rect key="frame" x="0.0" y="255" width="390" height="589"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="JVh-st-5OY">
-                                    <rect key="frame" x="0.0" y="169.66666828502309" width="390" height="44"/>
+                                    <rect key="frame" x="0.0" y="247.66666828502309" width="390" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SharedWithCell" rowHeight="121" id="m4K-10-tKk" customClass="SharedWithCell">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SharedWithCell" rowHeight="199" id="m4K-10-tKk" customClass="SharedWithCell">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m4K-10-tKk" id="JLR-qm-00M">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="121"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username (e.g. John)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-al-hkJ">
@@ -334,16 +335,43 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKw-wc-S6a">
-                                                    <rect key="frame" x="50" y="45" width="291" height="65"/>
+                                                    <rect key="frame" x="50" y="45" width="291" height="143"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="RoB-e5-Kdb" customClass="UserCell">
-                                                            <rect key="frame" x="0.0" y="24.333333969116211" width="291" height="43.666667938232422"/>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="55" id="RoB-e5-Kdb" customClass="UserCell">
+                                                            <rect key="frame" x="0.0" y="24.333333969116211" width="291" height="55"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RoB-e5-Kdb" id="cLG-tZ-qEa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="291" height="43.666667938232422"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="291" height="55"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N9N-bA-3NL" customClass="PFImageView">
+                                                                        <rect key="frame" x="16" y="6" width="44" height="44"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="N9N-bA-3NL" secondAttribute="height" multiplier="1:1" id="TrF-cS-36y"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Cu-jR8">
+                                                                        <rect key="frame" x="68" y="17" width="207" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <color key="highlightedColor" name="AccentColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="3DL-Cu-jR8" secondAttribute="bottom" constant="6" id="44V-UP-pbB"/>
+                                                                    <constraint firstItem="3DL-Cu-jR8" firstAttribute="leading" secondItem="N9N-bA-3NL" secondAttribute="trailing" constant="8" symbolic="YES" id="Ytb-Ir-Zae"/>
+                                                                    <constraint firstItem="3DL-Cu-jR8" firstAttribute="trailing" secondItem="cLG-tZ-qEa" secondAttribute="trailingMargin" id="hx1-Ds-m7h"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="N9N-bA-3NL" secondAttribute="bottom" constant="5" id="pq2-1v-xiv"/>
+                                                                    <constraint firstItem="3DL-Cu-jR8" firstAttribute="top" secondItem="cLG-tZ-qEa" secondAttribute="topMargin" constant="6" id="vN8-Ke-bM2"/>
+                                                                    <constraint firstItem="N9N-bA-3NL" firstAttribute="top" secondItem="cLG-tZ-qEa" secondAttribute="top" constant="6" id="z9G-7Q-Bcf"/>
+                                                                    <constraint firstItem="N9N-bA-3NL" firstAttribute="leading" secondItem="cLG-tZ-qEa" secondAttribute="leading" constant="16" id="zOE-Va-45W"/>
+                                                                </constraints>
                                                             </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="N9N-bA-3NL" id="ohA-Tw-Ubn"/>
+                                                                <outlet property="nameLabel" destination="3DL-Cu-jR8" id="NYQ-Kv-cd4"/>
+                                                            </connections>
                                                         </tableViewCell>
                                                     </prototypes>
                                                 </tableView>
@@ -1187,6 +1215,9 @@
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,10 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Parse;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet PFImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) PFUser *user;
 
 @end
 
