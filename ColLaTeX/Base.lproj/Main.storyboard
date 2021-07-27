@@ -317,22 +317,26 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bei-Rr-Cja">
                                 <rect key="frame" x="0.0" y="255" width="390" height="589"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="JVh-st-5OY">
-                                    <rect key="frame" x="0.0" y="247.66666828502309" width="390" height="44"/>
+                                    <rect key="frame" x="0.0" y="104.66666828502309" width="390" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SharedWithCell" rowHeight="199" id="m4K-10-tKk" customClass="SharedWithCell">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="199"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SharedWithCell" rowHeight="56" id="m4K-10-tKk" customClass="SharedWithCell">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m4K-10-tKk" id="JLR-qm-00M">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username (e.g. John)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-al-hkJ">
                                                     <rect key="frame" x="50" y="11" width="291" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="didBeginEditing:" destination="m4K-10-tKk" eventType="editingDidBegin" id="aCN-iJ-AmD"/>
+                                                        <action selector="didEndEditing:" destination="m4K-10-tKk" eventType="editingDidEnd" id="J7Q-V4-ZNd"/>
+                                                    </connections>
                                                 </textField>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKw-wc-S6a">
                                                     <rect key="frame" x="50" y="45" width="291" height="143"/>
@@ -386,13 +390,14 @@
                                                 <constraint firstItem="S4e-al-hkJ" firstAttribute="top" secondItem="JLR-qm-00M" secondAttribute="topMargin" id="Jpi-Zz-cFL"/>
                                                 <constraint firstItem="S4e-al-hkJ" firstAttribute="top" secondItem="JLR-qm-00M" secondAttribute="topMargin" id="KBh-cj-jfJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="S4e-al-hkJ" secondAttribute="trailing" constant="29" id="Vqt-jt-iXm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S4e-al-hkJ" secondAttribute="bottom" id="XGe-kQ-c0E"/>
                                                 <constraint firstItem="YKw-wc-S6a" firstAttribute="trailing" secondItem="S4e-al-hkJ" secondAttribute="trailing" id="ggh-NN-TrL"/>
                                                 <constraint firstItem="S4e-al-hkJ" firstAttribute="leading" secondItem="JLR-qm-00M" secondAttribute="leadingMargin" constant="30" id="pKQ-nJ-gI8"/>
-                                                <constraint firstItem="YKw-wc-S6a" firstAttribute="bottom" secondItem="JLR-qm-00M" secondAttribute="bottomMargin" id="sVV-Fv-nca"/>
                                                 <constraint firstItem="YKw-wc-S6a" firstAttribute="top" secondItem="S4e-al-hkJ" secondAttribute="bottom" id="wjm-o8-P9H"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bottomConstraint" destination="XGe-kQ-c0E" id="Fe9-8O-RFm"/>
                                             <outlet property="userTableView" destination="YKw-wc-S6a" id="SAp-Wu-tgL"/>
                                             <outlet property="usernameField" destination="S4e-al-hkJ" id="oc2-JL-tL7"/>
                                         </connections>
@@ -487,7 +492,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="minusButton" destination="ymw-xd-0w9" id="Dm9-hQ-X8p"/>
-                        <outlet property="tableView" destination="bei-Rr-Cja" id="Khf-fw-Qkl"/>
+                        <outlet property="tableView" destination="bei-Rr-Cja" id="cSI-kg-UN0"/>
                         <outlet property="titleLabel" destination="lOR-ab-OAc" id="TEZ-eg-TJh"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) PFUser *user;
 @property (strong, nonatomic) NSArray <PFUser *> *arrayOfUsers;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @end
 

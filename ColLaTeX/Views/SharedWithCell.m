@@ -70,4 +70,29 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayOfUsers.count;
 }
+
+- (IBAction)didBeginEditing:(id)sender {
+    self.bottomConstraint.constant += self.userTableView.frame.size.height;
+    CGRect frame = self.frame;
+    frame.size.height += self.userTableView.frame.size.height;
+    self.frame = frame;
+    [self updateConstraints];
+    [self updateConstraints];
+    [self.superview updateConstraints];
+    [self.userTableView setHidden:false];
+    [self.userTableView didMoveToSuperview];
+}
+
+- (IBAction)didEndEditing:(id)sender {
+    self.bottomConstraint.constant -= self.userTableView.frame.size.height;
+    CGRect frame = self.frame;
+    frame.size.height += self.userTableView.frame.size.height;
+    self.frame = frame;
+    [self updateConstraints];
+    [self reloadInputViews];
+    [self.superview updateConstraints];
+    [self.superview reloadInputViews];
+    [self.userTableView setHidden:true];
+}
+
 @end
