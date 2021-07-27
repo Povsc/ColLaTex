@@ -30,7 +30,21 @@
 }
 
 - (void)filter{
-    //TODO: filter data
+    if (self.usernameField.text.length > 0){
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"username" containsString:self.usernameField.text];
+        userQuery.limit = 5;
+        
+        [userQuery findObjectsInBackgroundWithBlock:^(NSArray <PFUser *> *users, NSError * _Nullable error){
+            if (error){
+                NSLog(@"Error: %@", error.localizedDescription);
+            }
+            else {
+                self.arrayOfUsers = users;
+                [self.userTableView reloadData];
+            }
+        }];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -41,10 +55,19 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
+    
+    // Set labels and parameters
+    cell.user = self.arrayOfUsers[indexPath.row];
+    cell.nameLabel.text = cell.user.username;
+    
+    // Configure Profile pic
+    cell.imageView.file = [cell.user objectForKey:@"profilePicture"];
+    [cell.imageView loadInBackground];
+    
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.arrayOfUsers.count;
 }
 @end

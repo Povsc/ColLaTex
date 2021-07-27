@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) PFUser *user;
+@property (strong, nonatomic) NSArray <PFUser *> *arrayOfUsers;
 
 @end
 

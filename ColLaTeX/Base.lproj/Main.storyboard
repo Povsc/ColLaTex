@@ -337,6 +337,9 @@
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKw-wc-S6a">
                                                     <rect key="frame" x="50" y="45" width="291" height="143"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="143" id="zi8-3p-o0y"/>
+                                                    </constraints>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="55" id="RoB-e5-Kdb" customClass="UserCell">
                                                             <rect key="frame" x="0.0" y="24.333333969116211" width="291" height="55"/>
@@ -349,6 +352,8 @@
                                                                         <rect key="frame" x="16" y="6" width="44" height="44"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="N9N-bA-3NL" secondAttribute="height" multiplier="1:1" id="TrF-cS-36y"/>
+                                                                            <constraint firstAttribute="width" constant="44" id="kgG-6z-Uw7"/>
+                                                                            <constraint firstAttribute="height" constant="44" id="o4o-DN-3MT"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Cu-jR8">
@@ -1207,7 +1212,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mdi-nP-qxq"/>
-        <segue reference="oY0-lf-guf"/>
+        <segue reference="83o-u7-5UZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
