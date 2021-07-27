@@ -11,8 +11,6 @@
 
 @interface CreateViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
-@property (weak, nonatomic) IBOutlet UITextField *sharedLabel;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) NSMutableArray <PFUser *> *arrayOfUsers;
 
 @end
@@ -23,24 +21,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.contentView.layer.cornerRadius = 30;
-    self.contentView.layer.masksToBounds = true;
-    
     // Begin editing titleField
     [self.titleLabel becomeFirstResponder];
 }
 
 - (IBAction)didTapCreate:(id)sender {
     // Get array of users
-    self.arrayOfUsers = [Document arrayOfUsersFromString:self.sharedLabel.text];
-    
+//    self.arrayOfUsers = [Document arrayOfUsersFromString:self.sharedLabel.text];
+
     // Create a new document
     [Document newDocumentNamed:self.titleLabel.text
                 withUsersArray:self.arrayOfUsers
                 withCompletion:^(BOOL succeeded, NSError * error) {
        if (error != nil) {
            NSLog(@"Error: %@", error.localizedDescription);
-           
+
        } else {
            NSLog(@"Document created successfully");
            [self dismissViewControllerAnimated:YES completion:nil];
