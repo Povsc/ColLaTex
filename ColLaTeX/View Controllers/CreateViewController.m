@@ -8,10 +8,14 @@
 #import "CreateViewController.h"
 #import "Parse/Parse.h"
 #import "Document.h"
+#import "SharedWithCell.h"
 
-@interface CreateViewController ()
+@interface CreateViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
 @property (strong, nonatomic) NSMutableArray <PFUser *> *arrayOfUsers;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) int counter;
+@property (weak, nonatomic) IBOutlet UIButton *minusButton;
 
 @end
 
@@ -20,6 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Set tableView delegate and data source
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    // Set counter
+    self.counter = 1;
     
     // Begin editing titleField
     [self.titleLabel becomeFirstResponder];
@@ -46,6 +57,26 @@
 - (IBAction)didTapCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)didTapPlus:(id)sender {
+    self.counter ++;
+    [self.tableView reloadData];
+    if (self.counter == 1){
+        [self.minusButton setEnabled:true];
+    }
+}
+
+- (IBAction)didTapMinus:(id)sender {
+    self.counter --;
+    [self.tableView reloadData];
+    if (self.counter == 0){
+        [self.minusButton setEnabled:false];
+    }
+}
+
+- (IBAction)didTapScreen:(id)sender {
+    [self.view endEditing:true];
+}
 /*
 #pragma mark - Navigation
 
@@ -56,4 +87,13 @@
 }
 */
 
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    SharedWithCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SharedWithCell"];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.counter;
+}
 @end
