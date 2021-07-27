@@ -9,9 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SharedWithCell : UITableViewCell
+@interface SharedWithCell : UITableViewCell <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 

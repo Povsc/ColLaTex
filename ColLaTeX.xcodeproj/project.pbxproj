@@ -10,6 +10,7 @@
 		06819F46EA19BBCD0C2090A2 /* Pods_ColLaTeXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B21645CDC2BB75436127C5 /* Pods_ColLaTeXTests.framework */; };
 		65CE784CE8445562AD38AFA3 /* Pods_ColLaTeX_ColLaTeXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4ACC7F3C8EE63D2818CA27 /* Pods_ColLaTeX_ColLaTeXUITests.framework */; };
 		C909F7C326B05A1A00792358 /* SharedWithCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7C226B05A1A00792358 /* SharedWithCell.m */; };
+		C909F7C626B08D0E00792358 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7C526B08D0E00792358 /* UserCell.m */; };
 		C9950DC326A1EC2300B08F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9950DC226A1EC2200B08F5B /* Assets.xcassets */; };
 		C9950DC626AA03C000B08F5B /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = C9950DC526AA03C000B08F5B /* Attachment.m */; };
 		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
@@ -66,6 +67,8 @@
 		C796579AEA91A9775850DB7D /* Pods-ColLaTeXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColLaTeXTests.debug.xcconfig"; path = "Target Support Files/Pods-ColLaTeXTests/Pods-ColLaTeXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C909F7C126B05A1A00792358 /* SharedWithCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedWithCell.h; sourceTree = "<group>"; };
 		C909F7C226B05A1A00792358 /* SharedWithCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedWithCell.m; sourceTree = "<group>"; };
+		C909F7C426B08D0E00792358 /* UserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		C909F7C526B08D0E00792358 /* UserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		C9950DC226A1EC2200B08F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9950DC426AA03C000B08F5B /* Attachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
 		C9950DC526AA03C000B08F5B /* Attachment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Attachment.m; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				C9E90BC226AB2A590067DAEE /* AttachmentCell.m */,
 				C909F7C126B05A1A00792358 /* SharedWithCell.h */,
 				C909F7C226B05A1A00792358 /* SharedWithCell.m */,
+				C909F7C426B08D0E00792358 /* UserCell.h */,
+				C909F7C526B08D0E00792358 /* UserCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				C9E90BC026AB28D00067DAEE /* AttachmentsViewController.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
+				C909F7C626B08D0E00792358 /* UserCell.m in Sources */,
 				C9E90BC326AB2A590067DAEE /* AttachmentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
