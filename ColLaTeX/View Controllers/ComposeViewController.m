@@ -11,6 +11,7 @@
 @import Parse;
 #import "SettingsViewController.h"
 #import "AttachmentsViewController.h"
+#import "TKDHighlightingTextStorage.h"
 
 @interface ComposeViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 @property (nonatomic) int keyboardOffset;
 @property (weak, nonatomic) IBOutlet UIButton *imagesButton;
+@property (strong, nonatomic) TKDHighlightingTextStorage *textStorage;
 
 @end
 
@@ -56,6 +58,14 @@
     if (!self.owner){
         self.navigationItem.rightBarButtonItem = nil;
     }
+    
+    
+    // Replace text storage
+    self.textStorage = [TKDHighlightingTextStorage new];
+    [self.textStorage addLayoutManager: self.contentLabel.layoutManager];
+    
+    // Load syntax highlighting
+    [self.textStorage replaceCharactersInRange:NSMakeRange(0, 0) withString:self.contentLabel.text];
 }
 
 - (IBAction)didTapScreen:(id)sender {
@@ -96,8 +106,7 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
-    [self.document updateContentWithString:self.contentLabel.text];
+    [self.document updateContentWithString:[self.textStorage string]];
 }
-
 
 @end

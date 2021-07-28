@@ -12,6 +12,7 @@
 		C909F7C326B05A1A00792358 /* SharedWithCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7C226B05A1A00792358 /* SharedWithCell.m */; };
 		C909F7C626B08D0E00792358 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7C526B08D0E00792358 /* UserCell.m */; };
 		C909F7CA26B1A2F900792358 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7C926B1A2F900792358 /* AddUserViewController.m */; };
+		C909F7D126B204F900792358 /* TKDHighlightingTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C909F7D026B204F900792358 /* TKDHighlightingTextStorage.m */; };
 		C9950DC326A1EC2300B08F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9950DC226A1EC2200B08F5B /* Assets.xcassets */; };
 		C9950DC626AA03C000B08F5B /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = C9950DC526AA03C000B08F5B /* Attachment.m */; };
 		C9BF0443269CD39900926C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0442269CD39900926C35 /* AppDelegate.m */; };
@@ -72,6 +73,8 @@
 		C909F7C526B08D0E00792358 /* UserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		C909F7C826B1A2F900792358 /* AddUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		C909F7C926B1A2F900792358 /* AddUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		C909F7CF26B204F900792358 /* TKDHighlightingTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKDHighlightingTextStorage.h; sourceTree = "<group>"; };
+		C909F7D026B204F900792358 /* TKDHighlightingTextStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKDHighlightingTextStorage.m; sourceTree = "<group>"; };
 		C9950DC226A1EC2200B08F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9950DC426AA03C000B08F5B /* Attachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
 		C9950DC526AA03C000B08F5B /* Attachment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Attachment.m; sourceTree = "<group>"; };
@@ -171,6 +174,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C909F7CE26B204DE00792358 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C909F7CF26B204F900792358 /* TKDHighlightingTextStorage.h */,
+				C909F7D026B204F900792358 /* TKDHighlightingTextStorage.m */,
+			);
+			path = "Custom Objects";
+			sourceTree = "<group>";
+		};
 		C9BF0435269CD39900926C35 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +208,7 @@
 		C9BF0440269CD39900926C35 /* ColLaTeX */ = {
 			isa = PBXGroup;
 			children = (
+				C909F7CE26B204DE00792358 /* Custom Objects */,
 				C9BF048D269E184200926C35 /* Views */,
 				C9BF0480269DECB400926C35 /* Helpers */,
 				C9BF047C269DE77F00926C35 /* View Controllers */,
@@ -571,6 +584,7 @@
 				C9BF0499269F37FF00926C35 /* SharedCell.m in Sources */,
 				C9BF0486269DF5BF00926C35 /* LoginViewController.m in Sources */,
 				C9BF049C269F646100926C35 /* ComposeViewController.m in Sources */,
+				C909F7D126B204F900792358 /* TKDHighlightingTextStorage.m in Sources */,
 				C9E90BC026AB28D00067DAEE /* AttachmentsViewController.m in Sources */,
 				C9BF0454269CD39A00926C35 /* main.m in Sources */,
 				C9BF0446269CD39900926C35 /* SceneDelegate.m in Sources */,
