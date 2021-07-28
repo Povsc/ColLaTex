@@ -73,7 +73,7 @@
     }];
     
     // Set font and font size to entire document
-    [self addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Courier New" size:14] range:NSMakeRange(0, self.string.length)];
+    [self addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Rockwell" size:14] range:NSMakeRange(0, self.string.length)];
   
   // Call super after changing the attrbutes, as it finalizes the attributes and calls the delegate methods.
   [super processEditing];
