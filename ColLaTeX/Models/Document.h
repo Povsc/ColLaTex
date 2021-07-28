@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface Document : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *docID;
@@ -26,5 +28,7 @@
 - (void)updateNameWithString:(NSString *)string;
 
 - (void)updateSharedArrayWithArray:(NSMutableArray <PFUser *> *)arrayOfUsers;
+
+NS_ASSUME_NONNULL_END
 
 @end
