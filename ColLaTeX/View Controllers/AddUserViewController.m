@@ -55,6 +55,9 @@
         // Create new query
         PFQuery *userQuery = [PFUser query];
         [userQuery whereKey:@"username" containsString:self.usernameField.text];
+        
+        // Make sure user cannot share document with themselves
+        [userQuery whereKey:@"username" notEqualTo:PFUser.currentUser.username];
         userQuery.limit = 5;
         
         // Search users
