@@ -11,7 +11,6 @@
 @interface SettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
-@property (weak, nonatomic) IBOutlet UITextField *shareField;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end
