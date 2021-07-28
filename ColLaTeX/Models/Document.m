@@ -115,8 +115,8 @@
     return arrayOfUsers;
 }
 
-- (void)updateSharedArrayWithString:(NSString *)string{
-    self.sharedWith = [Document arrayOfUsersFromString:string];
+- (void)updateSharedArrayWithArray:(NSMutableArray <PFUser *> *)arrayOfUsers{
+    self.sharedWith = arrayOfUsers;
     [self saveInBackground];
     
 }
