@@ -63,7 +63,7 @@
     // Find all in-line math expressions in range
     [mathExpression enumerateMatchesInString:self.string options:0 range:paragaphRange usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
         // Add green highlight color
-        [self addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:result.range];
+        [self addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHue:2.26 saturation:.85 brightness:.69 alpha:1] range:result.range];
     }];
     
     // Find all comments in range
