@@ -56,6 +56,7 @@
 - (IBAction)didTapSave:(id)sender {
     [self.document updateNameWithString:self.titleField.text];
     [self.document updateSharedArrayWithArray:self.arrayOfUsers];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 
