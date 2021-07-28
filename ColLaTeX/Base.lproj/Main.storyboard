@@ -1189,7 +1189,7 @@
         <scene sceneID="HB3-z9-19T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cku-9U-a25" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Documents" selectedImage="doc.fill" catalog="system" id="k4v-r5-pbR"/>
+                    <tabBarItem key="tabBarItem" title="My Documents" image="doc.fill" catalog="system" selectedImage="doc.fill" id="k4v-r5-pbR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a2v-MZ-x1R">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -1208,7 +1208,7 @@
         <scene sceneID="2gT-lJ-mRh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hhG-P6-YOn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shared" selectedImage="person.3.fill" catalog="system" id="JT3-Gc-qIU"/>
+                    <tabBarItem key="tabBarItem" title="Shared" image="person.3.fill" catalog="system" selectedImage="person.3.fill" id="JT3-Gc-qIU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wgp-CV-Wpd">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -1227,7 +1227,7 @@
         <scene sceneID="ycU-Ks-iCh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1r0-8c-TGT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.circle.fill" catalog="system" id="fgJ-ET-QeG"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" selectedImage="person.circle.fill" id="fgJ-ET-QeG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ru-rT-ZLX">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
